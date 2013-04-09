@@ -8,7 +8,7 @@ package tringesControlador;
  *
  * @author Aaron
  */
-public class TRINGES {
+public class UnionBD {
 
     /**
      * @param args the command line arguments
