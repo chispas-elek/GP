@@ -11,7 +11,7 @@ package tringesInterfaces;
 public class InterfazAnadirDueno extends javax.swing.JFrame {
 
     /**
-     * Creates new form InterfazAnadirDueno
+     * Creates new form InterfazAnadirDueno2
      */
     public InterfazAnadirDueno() {
         initComponents();

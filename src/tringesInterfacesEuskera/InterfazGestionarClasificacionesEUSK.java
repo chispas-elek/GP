@@ -4,8 +4,6 @@
  */
 package tringesInterfacesEuskera;
 
-import tringesInterfaces.*;
-
 /**
  *
  * @author Aaron
@@ -13,7 +11,7 @@ import tringesInterfaces.*;
 public class InterfazGestionarClasificacionesEUSK extends javax.swing.JFrame {
 
     /**
-     * Creates new form InterfazGestionarClasificaciones
+     * Creates new form InterfazGestionarClasificacionesEUSK
      */
     public InterfazGestionarClasificacionesEUSK() {
         initComponents();
