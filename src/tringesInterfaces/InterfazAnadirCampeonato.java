@@ -11,7 +11,7 @@ package tringesInterfaces;
 public class InterfazAnadirCampeonato extends javax.swing.JFrame {
 
     /**
-     * Creates new form InterfazAnadirCampeonato2
+     * Creates new form InterfazAnadirCampeonato
      */
     public InterfazAnadirCampeonato() {
         initComponents();
