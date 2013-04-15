@@ -26,17 +26,57 @@ public class InterfazGestionarDuenos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        lCampeonatos = new javax.swing.JList();
+        bModificar = new javax.swing.JButton();
+        bBorrar = new javax.swing.JButton();
+        bAnyadir = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Tringes -Gestionar dueños-");
+
+        jScrollPane1.setViewportView(lCampeonatos);
+
+        bModificar.setText("Modificar dueño");
+        bModificar.setEnabled(false);
+
+        bBorrar.setText("Desactivar dueño");
+        bBorrar.setEnabled(false);
+
+        bAnyadir.setText("Añadir dueño");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(63, 63, 63)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(bBorrar)
+                        .addGap(41, 41, 41))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(bModificar)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(bAnyadir)
+                        .addGap(62, 62, 62))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(bAnyadir)
+                        .addGap(36, 36, 36)
+                        .addComponent(bModificar)
+                        .addGap(40, 40, 40)
+                        .addComponent(bBorrar))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         pack();
@@ -77,5 +117,10 @@ public class InterfazGestionarDuenos extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bAnyadir;
+    private javax.swing.JButton bBorrar;
+    private javax.swing.JButton bModificar;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JList lCampeonatos;
     // End of variables declaration//GEN-END:variables
 }
