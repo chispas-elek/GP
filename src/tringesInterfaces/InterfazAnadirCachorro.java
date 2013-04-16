@@ -113,13 +113,16 @@ public class InterfazAnadirCachorro extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         //Ir a una interfaz que me confirme si quiero añador un perro.
-        //InterfazPreguntaAñadirPerro.setVisible(true);
         InterfazAnadirCachorro.this.setVisible(false);
+        InterfazAvisoAgregarPerro iaap = new InterfazAvisoAgregarPerro();
+        iaap.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         //Ir a la interfaz Anterior
         InterfazAnadirCachorro.this.setVisible(false);
+        InterfazModificarPerro imp = new InterfazModificarPerro();
+        imp.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
