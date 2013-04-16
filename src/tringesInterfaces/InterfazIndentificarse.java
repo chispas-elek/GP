@@ -28,11 +28,11 @@ public class InterfazIndentificarse extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        bClasificacion = new javax.swing.JButton();
         tUsuario = new javax.swing.JTextField();
         tPassword = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        bAceptar = new javax.swing.JButton();
+        bCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tringes -Identificacion-");
@@ -41,15 +41,15 @@ public class InterfazIndentificarse extends javax.swing.JFrame {
 
         jLabel2.setText("Contraseña");
 
-        jButton1.setText("jButton1");
+        bClasificacion.setText("Ver Clasificacion");
 
         tUsuario.setText("Introducir nombre de usuario...");
 
         tPassword.setText("Introducir contraseña...");
 
-        jButton2.setText("jButton2");
+        bAceptar.setText("Aceptar");
 
-        jButton3.setText("jButton3");
+        bCancelar.setText("Cancelar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -68,13 +68,13 @@ public class InterfazIndentificarse extends javax.swing.JFrame {
                             .addComponent(tUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(26, 26, 26)
-                        .addComponent(jButton1)))
+                        .addComponent(bClasificacion)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addComponent(bAceptar)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3)
+                .addComponent(bCancelar)
                 .addGap(8, 8, 8))
         );
         layout.setVerticalGroup(
@@ -89,11 +89,11 @@ public class InterfazIndentificarse extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(tPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(49, 49, 49)
-                .addComponent(jButton1)
+                .addComponent(bClasificacion)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(bAceptar)
+                    .addComponent(bCancelar))
                 .addGap(22, 22, 22))
         );
 
@@ -135,9 +135,9 @@ public class InterfazIndentificarse extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton bAceptar;
+    private javax.swing.JButton bCancelar;
+    private javax.swing.JButton bClasificacion;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField tPassword;

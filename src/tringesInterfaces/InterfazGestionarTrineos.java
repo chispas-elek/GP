@@ -43,15 +43,30 @@ public class InterfazGestionarTrineos extends javax.swing.JFrame {
 
         bModificar.setText("Modificar trineo");
         bModificar.setEnabled(false);
+        bModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bModificarActionPerformed(evt);
+            }
+        });
 
         bBorrar.setText("Borrar trineo");
         bBorrar.setEnabled(false);
+        bBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bBorrarActionPerformed(evt);
+            }
+        });
 
         bBuscar.setText("Buscar");
         bBuscar.setToolTipText("");
         bBuscar.setEnabled(false);
 
         bAnyadir.setText("Añadir trineo");
+        bAnyadir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bAnyadirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -103,6 +118,24 @@ public class InterfazGestionarTrineos extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bAnyadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAnyadirActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new InterfazAnadirTrineo().setVisible(true);
+    }//GEN-LAST:event_bAnyadirActionPerformed
+
+    private void bModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bModificarActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new InterfazModificarTrineo().setVisible(true);
+    }//GEN-LAST:event_bModificarActionPerformed
+
+    private void bBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBorrarActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new InterfazAvisoBorrarTrineo().setVisible(true);
+    }//GEN-LAST:event_bBorrarActionPerformed
 
     /**
      * @param args the command line arguments

@@ -39,19 +39,39 @@ public class InterfazGestionarCarreras extends javax.swing.JFrame {
 
         tBuscar.setText("Buscar carrera...");
 
+        lCampeonatos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lCampeonatosMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(lCampeonatos);
 
         bModificar.setText("Modificar carrera");
         bModificar.setEnabled(false);
+        bModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bModificarActionPerformed(evt);
+            }
+        });
 
         bBorrar.setText("Borrar carrera");
         bBorrar.setEnabled(false);
+        bBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bBorrarActionPerformed(evt);
+            }
+        });
 
         bBuscar.setText("Buscar");
         bBuscar.setToolTipText("");
         bBuscar.setEnabled(false);
 
         bAnyadir.setText("Añadir carrera");
+        bAnyadir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bAnyadirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -101,6 +121,30 @@ public class InterfazGestionarCarreras extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bAnyadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAnyadirActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new InterfazAnadirCarreras().setVisible(true);
+    }//GEN-LAST:event_bAnyadirActionPerformed
+
+    private void bModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bModificarActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new InterfazModificarCarreras().setVisible(true);
+    }//GEN-LAST:event_bModificarActionPerformed
+
+    private void bBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBorrarActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new InterfazAvisoBorrarCarrera().setVisible(true);
+    }//GEN-LAST:event_bBorrarActionPerformed
+
+    private void lCampeonatosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lCampeonatosMouseClicked
+        // TODO add your handling code here:
+        this.bModificar.setEnabled(true);
+        this.bBorrar.setEnabled(true);
+    }//GEN-LAST:event_lCampeonatosMouseClicked
 
     /**
      * @param args the command line arguments

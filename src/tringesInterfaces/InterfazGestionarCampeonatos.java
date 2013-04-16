@@ -40,6 +40,11 @@ public class InterfazGestionarCampeonatos extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tringes -Gestor campeonatos-");
 
+        lCampeonatos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lCampeonatosMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(lCampeonatos);
 
         tBuscar.setText("Buscar campeonato...");
@@ -47,14 +52,34 @@ public class InterfazGestionarCampeonatos extends javax.swing.JFrame {
         bBuscar.setText("Buscar");
         bBuscar.setToolTipText("");
         bBuscar.setEnabled(false);
+        bBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bBuscarActionPerformed(evt);
+            }
+        });
 
         bAnyadir.setText("Añadir cameponato");
+        bAnyadir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bAnyadirActionPerformed(evt);
+            }
+        });
 
         bModificar.setText("Modificar campeonato");
         bModificar.setEnabled(false);
+        bModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bModificarActionPerformed(evt);
+            }
+        });
 
         bBorrar.setText("Borrar campeonato");
         bBorrar.setEnabled(false);
+        bBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bBorrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -106,6 +131,36 @@ public class InterfazGestionarCampeonatos extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bAnyadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAnyadirActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new InterfazAnadirCampeonato().setVisible(true);
+    }//GEN-LAST:event_bAnyadirActionPerformed
+
+    private void bModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bModificarActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new InterfazModificarCampeonato().setVisible(true);
+    }//GEN-LAST:event_bModificarActionPerformed
+
+    private void bBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBorrarActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new InterfazAvisoBorrarCampeonato().setVisible(true);
+    }//GEN-LAST:event_bBorrarActionPerformed
+
+    private void bBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBuscarActionPerformed
+        // TODO add your handling code here:
+        String busqueda = this.tBuscar.getText();
+        
+    }//GEN-LAST:event_bBuscarActionPerformed
+
+    private void lCampeonatosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lCampeonatosMouseClicked
+        // TODO add your handling code here:
+        this.bModificar.setEnabled(true);
+        this.bBorrar.setEnabled(true);
+    }//GEN-LAST:event_lCampeonatosMouseClicked
 
     /**
      * @param args the command line arguments
