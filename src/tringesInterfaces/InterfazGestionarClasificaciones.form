@@ -51,11 +51,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="A&#xf1;adir resultados"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bAnyadirActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="bMostrar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Mostrar resultados"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bMostrarActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

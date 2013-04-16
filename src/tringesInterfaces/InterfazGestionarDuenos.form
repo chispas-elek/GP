@@ -78,6 +78,9 @@
               <StringArray count="0"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lCampeonatosMouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -86,17 +89,26 @@
         <Property name="text" type="java.lang.String" value="Modificar due&#xf1;o"/>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bModificarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="bBorrar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Desactivar due&#xf1;o"/>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bBorrarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="bAnyadir">
       <Properties>
         <Property name="text" type="java.lang.String" value="A&#xf1;adir due&#xf1;o"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bAnyadirActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

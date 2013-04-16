@@ -39,6 +39,11 @@ public class InterfazGestionarTrineos extends javax.swing.JFrame {
 
         tBuscar.setText("Buscar trineo...");
 
+        lCampeonatos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lCampeonatosMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(lCampeonatos);
 
         bModificar.setText("Modificar trineo");
@@ -60,6 +65,11 @@ public class InterfazGestionarTrineos extends javax.swing.JFrame {
         bBuscar.setText("Buscar");
         bBuscar.setToolTipText("");
         bBuscar.setEnabled(false);
+        bBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bBuscarActionPerformed(evt);
+            }
+        });
 
         bAnyadir.setText("Añadir trineo");
         bAnyadir.addActionListener(new java.awt.event.ActionListener() {
@@ -136,6 +146,17 @@ public class InterfazGestionarTrineos extends javax.swing.JFrame {
         this.setVisible(false);
         new InterfazAvisoBorrarTrineo().setVisible(true);
     }//GEN-LAST:event_bBorrarActionPerformed
+
+    private void lCampeonatosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lCampeonatosMouseClicked
+        // TODO add your handling code here:
+        this.bModificar.setEnabled(true);
+        this.bBorrar.setEnabled(true);
+    }//GEN-LAST:event_lCampeonatosMouseClicked
+
+    private void bBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBuscarActionPerformed
+        // TODO add your handling code here:
+        String buscar = this.tBuscar.getText();
+    }//GEN-LAST:event_bBuscarActionPerformed
 
     /**
      * @param args the command line arguments

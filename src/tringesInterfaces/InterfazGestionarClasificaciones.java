@@ -33,8 +33,18 @@ public class InterfazGestionarClasificaciones extends javax.swing.JFrame {
         setTitle("Tringes -Gestionar clasificaiones-");
 
         bAnyadir.setText("Añadir resultados");
+        bAnyadir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bAnyadirActionPerformed(evt);
+            }
+        });
 
         bMostrar.setText("Mostrar resultados");
+        bMostrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bMostrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -59,6 +69,18 @@ public class InterfazGestionarClasificaciones extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bAnyadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAnyadirActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new InterfazAnadirResultados().setVisible(true);
+    }//GEN-LAST:event_bAnyadirActionPerformed
+
+    private void bMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bMostrarActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new InterfazModificarResultados().setVisible(true);
+    }//GEN-LAST:event_bMostrarActionPerformed
 
     /**
      * @param args the command line arguments

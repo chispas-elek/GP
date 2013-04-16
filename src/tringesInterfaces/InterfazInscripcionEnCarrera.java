@@ -53,8 +53,18 @@ public class InterfazInscripcionEnCarrera extends javax.swing.JFrame {
         });
 
         bAceptar.setText("Aceptar");
+        bAceptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bAceptarActionPerformed(evt);
+            }
+        });
 
         bCancelar.setText("Cancelar");
+        bCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -106,8 +116,23 @@ public class InterfazInscripcionEnCarrera extends javax.swing.JFrame {
 
     private void verPerrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verPerrosActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
+        new InterfazAnadirPerrosACarrera().setVisible(true);
         
     }//GEN-LAST:event_verPerrosActionPerformed
+
+    private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        InterfazUsuarioAdministrador().setVisible(true);
+    }//GEN-LAST:event_bCancelarActionPerformed
+
+    private void bAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAceptarActionPerformed
+        // TODO add your handling code here:
+        String nTrineo = this.nTrineo.getText();
+        String nPiloto = this.nPiloto.getText();
+        //Acceso a la base de datos
+    }//GEN-LAST:event_bAceptarActionPerformed
 
     /**
      * @param args the command line arguments

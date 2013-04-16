@@ -35,15 +35,35 @@ public class InterfazGestionarDuenos extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tringes -Gestionar dueños-");
 
+        lCampeonatos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lCampeonatosMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(lCampeonatos);
 
         bModificar.setText("Modificar dueño");
         bModificar.setEnabled(false);
+        bModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bModificarActionPerformed(evt);
+            }
+        });
 
         bBorrar.setText("Desactivar dueño");
         bBorrar.setEnabled(false);
+        bBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bBorrarActionPerformed(evt);
+            }
+        });
 
         bAnyadir.setText("Añadir dueño");
+        bAnyadir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bAnyadirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -81,6 +101,30 @@ public class InterfazGestionarDuenos extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bAnyadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAnyadirActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new InterfazAnadirDueno().setVisible(true);
+    }//GEN-LAST:event_bAnyadirActionPerformed
+
+    private void bModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bModificarActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new InterfazModificarDueno().setVisible(true);
+    }//GEN-LAST:event_bModificarActionPerformed
+
+    private void bBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBorrarActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new InterfazAvisoDesactivarDueno().setVisible(true);
+    }//GEN-LAST:event_bBorrarActionPerformed
+
+    private void lCampeonatosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lCampeonatosMouseClicked
+        // TODO add your handling code here:
+        this.bModificar.setEnabled(true);
+        this.bBorrar.setEnabled(true);
+    }//GEN-LAST:event_lCampeonatosMouseClicked
 
     /**
      * @param args the command line arguments

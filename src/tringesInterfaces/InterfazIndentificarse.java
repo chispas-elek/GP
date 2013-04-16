@@ -15,6 +15,8 @@ public class InterfazIndentificarse extends javax.swing.JFrame {
      */
     public InterfazIndentificarse() {
         initComponents();
+        this.tUsuario.setText("Introduzca nombre de usuario...");
+        this.tPassword.setText("Introduzca contraseña...");
     }
 
     /**
@@ -42,14 +44,29 @@ public class InterfazIndentificarse extends javax.swing.JFrame {
         jLabel2.setText("Contraseña");
 
         bClasificacion.setText("Ver Clasificacion");
+        bClasificacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bClasificacionActionPerformed(evt);
+            }
+        });
 
         tUsuario.setText("Introducir nombre de usuario...");
 
         tPassword.setText("Introducir contraseña...");
 
         bAceptar.setText("Aceptar");
+        bAceptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bAceptarActionPerformed(evt);
+            }
+        });
 
         bCancelar.setText("Cancelar");
+        bCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -99,6 +116,33 @@ public class InterfazIndentificarse extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bClasificacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bClasificacionActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new InterfazVerClasificacion().setVisible(true);
+    }//GEN-LAST:event_bClasificacionActionPerformed
+
+    private void bAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAceptarActionPerformed
+        // TODO add your handling code here:
+        String user = this.tUsuario.getText();
+        boolean existe = false; //Comprueba que el usuario exista
+        if(!existe) {
+            this.setVisible(false);
+            new InterfazBannerErrorLogin().setVisible(true);
+        }
+        String pass = this.tPassword.getText();
+        String authen = null;//password del usuario user extraido de la base de datos
+        if(pass.equals(authen)) { //Falta la gestion con la base de datos
+            this.setVisible(false);
+            new InterfazBannerErrorLogin().setVisible(true);
+        }
+    }//GEN-LAST:event_bAceptarActionPerformed
+
+    private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed
+        // TODO add your handling code here:t
+        this.finalize();
+    }//GEN-LAST:event_bCancelarActionPerformed
 
     /**
      * @param args the command line arguments
