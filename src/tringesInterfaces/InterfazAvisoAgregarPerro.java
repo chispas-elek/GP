@@ -82,6 +82,8 @@ public class InterfazAvisoAgregarPerro extends javax.swing.JFrame {
         InterfazAvisoAgregarPerro.this.setVisible(false);
         InterfazBannerAgregarPerro ibap = new InterfazBannerAgregarPerro();
         ibap.setVisible(true);
+        
+        //Aquí debería ir el código para conectarnos a la base de datos y agrergar el perro etc..
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
