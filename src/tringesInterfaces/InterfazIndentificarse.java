@@ -141,7 +141,7 @@ public class InterfazIndentificarse extends javax.swing.JFrame {
 
     private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed
         // TODO add your handling code here:t
-        this.finalize();
+        this.dispose();
     }//GEN-LAST:event_bCancelarActionPerformed
 
     /**

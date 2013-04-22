@@ -25,6 +25,8 @@ public class UnionBD {
     private String user = "root";
     private String password = "4573rix";
     
+    /*
+    
     public void anadirCachorro(String pPadre, String pMadre, Date pFecha) {
     
         try {
@@ -1097,5 +1099,5 @@ public class UnionBD {
             }
         }
     }
-    
+    */
 }
