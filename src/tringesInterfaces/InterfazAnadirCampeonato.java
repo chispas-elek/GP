@@ -102,11 +102,15 @@ public class InterfazAnadirCampeonato extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         //Ir a la siguiente interfaz
         InterfazAnadirCampeonato.this.setVisible(false);
+        InterfazAvisoAnadirCampeonato iaac = new InterfazAvisoAnadirCampeonato();
+        iaac.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         //Ir a la interfaz anterior
         InterfazAnadirCampeonato.this.setVisible(false);
+        InterfazGestionarCampeonatos igc = new InterfazGestionarCampeonatos();
+        igc.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
