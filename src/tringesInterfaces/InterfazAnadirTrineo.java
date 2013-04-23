@@ -114,7 +114,7 @@ public class InterfazAnadirTrineo extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        InterfazAnadirTrineo.this.setVisible(false);
+        //InterfazAnadirTrineo.this.setVisible(false);
         InterfazAvisoAnadirTrineo iaat = new InterfazAvisoAnadirTrineo();
         iaat.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed

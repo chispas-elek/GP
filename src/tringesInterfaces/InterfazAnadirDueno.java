@@ -116,7 +116,7 @@ public class InterfazAnadirDueno extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        InterfazAnadirDueno.this.setVisible(false);
+        //InterfazAnadirDueno.this.setVisible(false);
         InterfazAvisoAnadirDueno iaad = new InterfazAvisoAnadirDueno();
         iaad.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed

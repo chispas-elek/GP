@@ -144,7 +144,7 @@ public class InterfazAnadirClub extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        InterfazAnadirClub.this.setVisible(false);
+        //InterfazAnadirClub.this.setVisible(false);
         InterfazGestionarClub igc = new InterfazGestionarClub();
         igc.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
