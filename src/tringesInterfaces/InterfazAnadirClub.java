@@ -62,6 +62,11 @@ public class InterfazAnadirClub extends javax.swing.JFrame {
         jTextField5.setText("jTextField5");
 
         jButton1.setText("Aceptar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Cancelar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -143,6 +148,12 @@ public class InterfazAnadirClub extends javax.swing.JFrame {
         InterfazGestionarClub igc = new InterfazGestionarClub();
         igc.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        InterfazAnadirClub.this.setVisible(false);
+        InterfazAvisoAnadirClub iaac = new InterfazAvisoAnadirClub();
+        iaac.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
