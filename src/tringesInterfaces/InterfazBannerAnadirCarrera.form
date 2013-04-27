@@ -34,7 +34,7 @@
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="200" max="32767" attributes="0"/>
+              <EmptySpace pref="199" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -53,7 +53,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Carrera borrada."/>
+        <Property name="text" type="java.lang.String" value="Carrera a&#xf1;adida."/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="bAceptar">

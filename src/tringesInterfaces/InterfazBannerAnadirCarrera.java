@@ -31,7 +31,7 @@ public class InterfazBannerAnadirCarrera extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Carrera borrada.");
+        jLabel1.setText("Carrera añadida.");
 
         bAceptar.setText("Aceptar");
         bAceptar.addActionListener(new java.awt.event.ActionListener() {
@@ -52,7 +52,7 @@ public class InterfazBannerAnadirCarrera extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(192, 192, 192)
                         .addComponent(jLabel1)))
-                .addContainerGap(200, Short.MAX_VALUE))
+                .addContainerGap(199, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
