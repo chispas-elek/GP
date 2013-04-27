@@ -80,13 +80,13 @@ public class InterfazAvisoModificarTrineo extends javax.swing.JFrame {
 
     private void bAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAceptarActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
+        this.dispose();
         new InterfazBannerModificarCarrera().setVisible(true);
     }//GEN-LAST:event_bAceptarActionPerformed
 
     private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
+        this.dispose();
         new InterfazGestionarTrineos().setVisible(true);
     }//GEN-LAST:event_bCancelarActionPerformed
 

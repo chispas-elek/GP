@@ -80,14 +80,14 @@ public class InterfazAvisoModificarCarrera extends javax.swing.JFrame {
 
     private void bAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAceptarActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
+        this.dispose();
         new InterfazBannerModificarCarrera().setVisible(true);
         //Acceso a db para modificar
     }//GEN-LAST:event_bAceptarActionPerformed
 
     private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
+        this.dispose();
         new InterfazGestionarCarreras().setVisible(true);
         //Llamada para restablecer los datos??
     }//GEN-LAST:event_bCancelarActionPerformed

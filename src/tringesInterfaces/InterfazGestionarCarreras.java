@@ -124,19 +124,19 @@ public class InterfazGestionarCarreras extends javax.swing.JFrame {
 
     private void bAnyadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAnyadirActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
+        this.dispose();
         new InterfazAnadirCarreras().setVisible(true);
     }//GEN-LAST:event_bAnyadirActionPerformed
 
     private void bModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bModificarActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
+        this.dispose();
         new InterfazModificarCarreras().setVisible(true);
     }//GEN-LAST:event_bModificarActionPerformed
 
     private void bBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBorrarActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
+        this.dispose();
         new InterfazAvisoBorrarCarrera().setVisible(true);
     }//GEN-LAST:event_bBorrarActionPerformed
 

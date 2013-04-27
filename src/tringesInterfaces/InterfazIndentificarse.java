@@ -130,7 +130,7 @@ public class InterfazIndentificarse extends javax.swing.JFrame {
 
     private void bClasificacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bClasificacionActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
+        this.dispose();
         new InterfazVerClasificacion().setVisible(true);
     }//GEN-LAST:event_bClasificacionActionPerformed
 
@@ -139,13 +139,13 @@ public class InterfazIndentificarse extends javax.swing.JFrame {
         String user = this.tUsuario.getText();
         boolean existe = false; //Comprueba que el usuario exista
         if(!existe) {
-            this.setVisible(false);
+            this.dispose();
             new InterfazBannerErrorLogin().setVisible(true);
         }
         String pass = this.tPassword.getText();
         String authen = null;//password del usuario user extraido de la base de datos
         if(pass.equals(authen)) { //Falta la gestion con la base de datos
-            this.setVisible(false);
+            this.dispose();
             new InterfazBannerErrorLogin().setVisible(true);
         }
     }//GEN-LAST:event_bAceptarActionPerformed
@@ -157,7 +157,7 @@ public class InterfazIndentificarse extends javax.swing.JFrame {
 
     private void bConexionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bConexionActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
+        this.dispose();
         new InterfazDatosBD().setVisible(true);
     }//GEN-LAST:event_bConexionActionPerformed
 

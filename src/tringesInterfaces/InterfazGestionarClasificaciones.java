@@ -72,13 +72,13 @@ public class InterfazGestionarClasificaciones extends javax.swing.JFrame {
 
     private void bAnyadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAnyadirActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
+        this.dispose();
         new InterfazAnadirResultados().setVisible(true);
     }//GEN-LAST:event_bAnyadirActionPerformed
 
     private void bMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bMostrarActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
+        this.dispose();
         new InterfazModificarResultados().setVisible(true);
     }//GEN-LAST:event_bMostrarActionPerformed
 

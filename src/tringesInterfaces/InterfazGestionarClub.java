@@ -131,19 +131,19 @@ public class InterfazGestionarClub extends javax.swing.JFrame {
 
     private void bAnyadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAnyadirActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
+        this.dispose();
         new InterfazAnadirClub().setVisible(true);
     }//GEN-LAST:event_bAnyadirActionPerformed
 
     private void bModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bModificarActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
+        this.dispose();
         new InterfazModificarClub().setVisible(true);
     }//GEN-LAST:event_bModificarActionPerformed
 
     private void bBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBorrarActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
+        this.dispose();
         new InterfazAvisoDesactivarClub().setVisible(true);
     }//GEN-LAST:event_bBorrarActionPerformed
 
