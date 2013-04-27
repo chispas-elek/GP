@@ -136,7 +136,7 @@ public class InterfazIndentificarse extends javax.swing.JFrame {
 
     private void bAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAceptarActionPerformed
         // TODO add your handling code here:
-        String user = this.tUsuario.getText();
+       /* String user = this.tUsuario.getText();
         boolean existe = false; //Comprueba que el usuario exista
         if(!existe) {
             this.dispose();
@@ -145,9 +145,13 @@ public class InterfazIndentificarse extends javax.swing.JFrame {
         String pass = this.tPassword.getText();
         String authen = null;//password del usuario user extraido de la base de datos
         if(pass.equals(authen)) { //Falta la gestion con la base de datos
+            
             this.dispose();
+    
             new InterfazBannerErrorLogin().setVisible(true);
-        }
+        }*/
+        this.dispose();
+        new InterfazEleccion().setVisible(true);
     }//GEN-LAST:event_bAceptarActionPerformed
 
     private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed
