@@ -68,9 +68,7 @@ public class InterfazBannerModificarTrineo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAceptarActionPerformed
-        // TODO add your handling code here:
         this.dispose();
-        new InterfazGestionarTrineos().setVisible(true);
     }//GEN-LAST:event_bAceptarActionPerformed
 
     /**
