@@ -150,7 +150,7 @@ public class InterfazAnadirClub extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        InterfazAnadirClub.this.setVisible(false);
+        //InterfazAnadirClub.this.setVisible(false);
         InterfazAvisoAnadirClub iaac = new InterfazAvisoAnadirClub();
         iaac.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed

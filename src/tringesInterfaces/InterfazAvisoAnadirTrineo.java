@@ -88,7 +88,7 @@ public class InterfazAvisoAnadirTrineo extends javax.swing.JFrame {
     private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed
         // TODO add your handling code here:
         this.dispose();
-        new InterfazAnadirTrineo().setVisible(true);
+        //new InterfazAnadirTrineo().setVisible(true);
     }//GEN-LAST:event_bCancelarActionPerformed
 
     /**

@@ -70,7 +70,7 @@ public class InterfazBannerAnadirCarrera extends javax.swing.JFrame {
     private void bAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAceptarActionPerformed
         // TODO add your handling code here:
         this.dispose();
-        new InterfazAnadirCarreras().setVisible(true);
+        //new InterfazAnadirCarreras().setVisible(true);
     }//GEN-LAST:event_bAceptarActionPerformed
 
     /**

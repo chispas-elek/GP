@@ -88,8 +88,8 @@ public class InterfazAvisoAgregarPerro extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         InterfazAvisoAgregarPerro.this.setVisible(false);
-        InterfazAnadirCachorro iac = new InterfazAnadirCachorro();
-        iac.setVisible(true);
+        //InterfazAnadirCachorro iac = new InterfazAnadirCachorro();
+        //iac.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
