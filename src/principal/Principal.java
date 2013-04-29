@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 package principal;
-import tringesInterfaces.InterfazIndentificarse;
+import tringesInterfaces.InterfazIdentificarse;
 import tringesControlador.UnionBD;
 
 /**
@@ -16,7 +16,7 @@ public class Principal {
      
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new InterfazIndentificarse().setVisible(true);
+                new InterfazIdentificarse().setVisible(true);
             }
         });
         

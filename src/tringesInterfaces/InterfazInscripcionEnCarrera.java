@@ -41,10 +41,6 @@ public class InterfazInscripcionEnCarrera extends javax.swing.JFrame {
 
         jLabel5.setText("Nombre piloto");
 
-        nTrineo.setText("Introduce un nombre");
-
-        nPiloto.setText("Introduce un nombre");
-
         verPerros.setText("Añadir nombres perros");
         verPerros.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,18 +74,19 @@ public class InterfazInscripcionEnCarrera extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(49, 49, 49)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(bAceptar)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(bAceptar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(bCancelar))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(nTrineo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(nPiloto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(bCancelar)))
-                .addContainerGap(16, Short.MAX_VALUE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(nPiloto, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
+                                    .addComponent(nTrineo))))))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -123,8 +120,8 @@ public class InterfazInscripcionEnCarrera extends javax.swing.JFrame {
 
     private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
         new InterfazUsuarioAdministrador().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_bCancelarActionPerformed
 
     private void bAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAceptarActionPerformed
@@ -132,6 +129,8 @@ public class InterfazInscripcionEnCarrera extends javax.swing.JFrame {
         String nTrineo = this.nTrineo.getText();
         String nPiloto = this.nPiloto.getText();
         //Acceso a la base de datos
+        
+        this.dispose();
     }//GEN-LAST:event_bAceptarActionPerformed
 
     /**
