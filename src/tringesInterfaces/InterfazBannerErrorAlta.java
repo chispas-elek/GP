@@ -32,12 +32,13 @@ public class InterfazBannerErrorAlta extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("El usuario no está dado de alta.");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle"); // NOI18N
+        jLabel1.setText(bundle.getString("EL USUARIO NO ESTÁ DADO DE ALTA.")); // NOI18N
 
-        jLabel2.setText("Consulte con el administrador.");
+        jLabel2.setText(bundle.getString("CONSULTE CON EL ADMINISTRADOR.")); // NOI18N
 
-        jButton1.setText("Aceptar");
-        jButton1.setActionCommand("");
+        jButton1.setText(bundle.getString("ACEPTAR")); // NOI18N
+        jButton1.setActionCommand(bundle.getString("")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -81,7 +82,7 @@ public class InterfazBannerErrorAlta extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if (java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle").getString("NIMBUS").equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

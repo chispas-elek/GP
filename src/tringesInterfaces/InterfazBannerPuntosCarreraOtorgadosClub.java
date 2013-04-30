@@ -32,14 +32,15 @@ public class InterfazBannerPuntosCarreraOtorgadosClub extends javax.swing.JFrame
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Continuar");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle"); // NOI18N
+        jButton1.setText(bundle.getString("CONTINUAR")); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jLabel1.setText("Los puntos de la carrera les han sido otorgados al club seleccionado");
+        jLabel1.setText(bundle.getString("LOS PUNTOS DE LA CARRERA LES HAN SIDO OTORGADOS AL CLUB SELECCIONADO")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -83,7 +84,7 @@ public class InterfazBannerPuntosCarreraOtorgadosClub extends javax.swing.JFrame
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if (java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle").getString("NIMBUS").equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

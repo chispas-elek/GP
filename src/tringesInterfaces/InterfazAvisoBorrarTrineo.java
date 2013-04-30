@@ -32,16 +32,17 @@ public class InterfazAvisoBorrarTrineo extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("¿Seguro que desea borrar este trineo?");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle"); // NOI18N
+        jLabel1.setText(bundle.getString("¿SEGURO QUE DESEA BORRAR ESTE TRINEO?")); // NOI18N
 
-        bAceptar.setText("Aceptar");
+        bAceptar.setText(bundle.getString("ACEPTAR")); // NOI18N
         bAceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bAceptarActionPerformed(evt);
             }
         });
 
-        bCancelar.setText("Cancelar");
+        bCancelar.setText(bundle.getString("CANCELAR")); // NOI18N
         bCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bCancelarActionPerformed(evt);
@@ -102,7 +103,7 @@ public class InterfazAvisoBorrarTrineo extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if (java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle").getString("NIMBUS").equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

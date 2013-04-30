@@ -46,26 +46,27 @@ public class InterfazModificarPerro extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Nombre");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle"); // NOI18N
+        jLabel1.setText(bundle.getString("NOMBRE")); // NOI18N
 
-        jLabel2.setText("Raza");
+        jLabel2.setText(bundle.getString("RAZA")); // NOI18N
 
-        jLabel3.setText("Sexo");
+        jLabel3.setText(bundle.getString("SEXO")); // NOI18N
 
-        jLabel4.setText("Dueño");
+        jLabel4.setText(bundle.getString("DUEÑO")); // NOI18N
 
-        jLabel5.setText("Club");
+        jLabel5.setText(bundle.getString("CLUB")); // NOI18N
 
-        jLabel6.setText("Cachorros");
+        jLabel6.setText(bundle.getString("CACHORROS")); // NOI18N
 
-        jButton1.setText("Aceptar");
+        jButton1.setText(bundle.getString("ACEPTAR")); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Cancelar");
+        jButton2.setText(bundle.getString("CANCELAR")); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -76,14 +77,14 @@ public class InterfazModificarPerro extends javax.swing.JFrame {
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jButton3.setText("Añadir");
+        jButton3.setText(bundle.getString("AÑADIR")); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Borrar");
+        jButton4.setText(bundle.getString("BORRAR")); // NOI18N
 
         jList1.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -191,7 +192,7 @@ public class InterfazModificarPerro extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if (java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle").getString("NIMBUS").equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

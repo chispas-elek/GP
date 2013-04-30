@@ -41,16 +41,17 @@ public class InterfazVenderPerros extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jList1);
 
-        jLabel1.setText("Lista dueños");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle"); // NOI18N
+        jLabel1.setText(bundle.getString("LISTA DUEÑOS")); // NOI18N
 
-        jButton1.setText("Vender");
+        jButton1.setText(bundle.getString("VENDER")); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Cancelar");
+        jButton2.setText(bundle.getString("CANCELAR")); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -113,7 +114,7 @@ public class InterfazVenderPerros extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if (java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle").getString("NIMBUS").equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

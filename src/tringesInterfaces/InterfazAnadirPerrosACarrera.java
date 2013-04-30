@@ -51,11 +51,12 @@ public class InterfazAnadirPerrosACarrera extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Buscar");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle"); // NOI18N
+        jButton1.setText(bundle.getString("BUSCAR")); // NOI18N
 
-        jButton2.setText("Añadir");
+        jButton2.setText(bundle.getString("AÑADIR")); // NOI18N
 
-        jButton3.setText("Cancelar");
+        jButton3.setText(bundle.getString("CANCELAR")); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -147,7 +148,7 @@ public class InterfazAnadirPerrosACarrera extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if (java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle").getString("NIMBUS").equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

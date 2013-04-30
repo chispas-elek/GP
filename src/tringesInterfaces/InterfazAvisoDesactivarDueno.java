@@ -32,11 +32,12 @@ public class InterfazAvisoDesactivarDueno extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("¿Quiere desactivar el dueño seleccionado?");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle"); // NOI18N
+        jLabel1.setText(bundle.getString("¿QUIERE DESACTIVAR EL DUEÑO SELECCIONADO?")); // NOI18N
 
-        jButton1.setText("Si");
+        jButton1.setText(bundle.getString("SI")); // NOI18N
 
-        jButton2.setText("No");
+        jButton2.setText(bundle.getString("NO")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -79,7 +80,7 @@ public class InterfazAvisoDesactivarDueno extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if (java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle").getString("NIMBUS").equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

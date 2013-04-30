@@ -11,7 +11,9 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="title" type="java.lang.String" value="Tringes -Gestor campeonatos-"/>
+    <Property name="title" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+      <ResourceString bundle="tringesInterfaces/Bundle.properties" key="TRINGES -GESTOR CAMPEONATOS-" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -113,13 +115,19 @@
     </Container>
     <Component class="javax.swing.JTextField" name="tBuscar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Buscar campeonato..."/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="tringesInterfaces/Bundle.properties" key="BUSCAR CAMPEONATO..." replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="bBuscar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Buscar"/>
-        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="tringesInterfaces/Bundle.properties" key="BUSCAR" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+        </Property>
+        <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="tringesInterfaces/Bundle.properties" key="" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+        </Property>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
@@ -128,7 +136,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="bAnyadir">
       <Properties>
-        <Property name="text" type="java.lang.String" value="A&#xf1;adir cameponato"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="tringesInterfaces/Bundle.properties" key="A&#xd1;ADIR CAMEPONATO" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bAnyadirActionPerformed"/>
@@ -136,7 +146,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="bModificar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Modificar campeonato"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="tringesInterfaces/Bundle.properties" key="MODIFICAR CAMPEONATO" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+        </Property>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
@@ -145,7 +157,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="bBorrar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Borrar campeonato"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="tringesInterfaces/Bundle.properties" key="BORRAR CAMPEONATO" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+        </Property>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>

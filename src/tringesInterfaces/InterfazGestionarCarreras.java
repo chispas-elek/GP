@@ -35,9 +35,10 @@ public class InterfazGestionarCarreras extends javax.swing.JFrame {
         bAnyadir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Tringes -Gestionar Carreras-");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle"); // NOI18N
+        setTitle(bundle.getString("TRINGES -GESTIONAR CARRERAS-")); // NOI18N
 
-        tBuscar.setText("Buscar carrera...");
+        tBuscar.setText(bundle.getString("BUSCAR CARRERA...")); // NOI18N
 
         lCampeonatos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -46,7 +47,7 @@ public class InterfazGestionarCarreras extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(lCampeonatos);
 
-        bModificar.setText("Modificar carrera");
+        bModificar.setText(bundle.getString("MODIFICAR CARRERA")); // NOI18N
         bModificar.setEnabled(false);
         bModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -54,7 +55,7 @@ public class InterfazGestionarCarreras extends javax.swing.JFrame {
             }
         });
 
-        bBorrar.setText("Borrar carrera");
+        bBorrar.setText(bundle.getString("BORRAR CARRERA")); // NOI18N
         bBorrar.setEnabled(false);
         bBorrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,11 +63,11 @@ public class InterfazGestionarCarreras extends javax.swing.JFrame {
             }
         });
 
-        bBuscar.setText("Buscar");
-        bBuscar.setToolTipText("");
+        bBuscar.setText(bundle.getString("BUSCAR")); // NOI18N
+        bBuscar.setToolTipText(bundle.getString("")); // NOI18N
         bBuscar.setEnabled(false);
 
-        bAnyadir.setText("Añadir carrera");
+        bAnyadir.setText(bundle.getString("AÑADIR CARRERA")); // NOI18N
         bAnyadir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bAnyadirActionPerformed(evt);
@@ -157,7 +158,7 @@ public class InterfazGestionarCarreras extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if (java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle").getString("NIMBUS").equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

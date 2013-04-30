@@ -30,16 +30,17 @@ public class InterfazGestionarClasificaciones extends javax.swing.JFrame {
         bMostrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Tringes -Gestionar clasificaiones-");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle"); // NOI18N
+        setTitle(bundle.getString("TRINGES -GESTIONAR CLASIFICAIONES-")); // NOI18N
 
-        bAnyadir.setText("Añadir resultados");
+        bAnyadir.setText(bundle.getString("AÑADIR RESULTADOS")); // NOI18N
         bAnyadir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bAnyadirActionPerformed(evt);
             }
         });
 
-        bMostrar.setText("Mostrar resultados");
+        bMostrar.setText(bundle.getString("MOSTRAR RESULTADOS")); // NOI18N
         bMostrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bMostrarActionPerformed(evt);
@@ -93,7 +94,7 @@ public class InterfazGestionarClasificaciones extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if (java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle").getString("NIMBUS").equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

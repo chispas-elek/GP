@@ -37,26 +37,27 @@ public class InterfazAnadirCachorro extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Con quien:");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle"); // NOI18N
+        jLabel1.setText(bundle.getString("CON QUIEN:")); // NOI18N
 
-        jLabel2.setText("Cuantos:");
+        jLabel2.setText(bundle.getString("CUANTOS:")); // NOI18N
 
-        jLabel3.setText("Fecha:");
+        jLabel3.setText(bundle.getString("FECHA:")); // NOI18N
 
-        jTextField1.setText("Perro 1");
+        jTextField1.setText(bundle.getString("PERRO 1")); // NOI18N
 
-        jTextField2.setText("1");
+        jTextField2.setText(bundle.getString("1")); // NOI18N
 
-        jTextField3.setText("jTextField3");
+        jTextField3.setText(bundle.getString("JTEXTFIELD3")); // NOI18N
 
-        jButton1.setText("Aceptar");
+        jButton1.setText(bundle.getString("ACEPTAR")); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Cancelar");
+        jButton2.setText(bundle.getString("CANCELAR")); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -136,7 +137,7 @@ public class InterfazAnadirCachorro extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if (java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle").getString("NIMBUS").equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

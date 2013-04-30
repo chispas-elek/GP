@@ -36,34 +36,35 @@ public class InterfazIdentificarse extends javax.swing.JFrame {
         bConexion = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Tringes -Identificacion-");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle"); // NOI18N
+        setTitle(bundle.getString("TRINGES -IDENTIFICACION-")); // NOI18N
 
-        jLabel1.setText("Usuario");
+        jLabel1.setText(bundle.getString("USUARIO")); // NOI18N
 
-        jLabel2.setText("Contraseña");
+        jLabel2.setText(bundle.getString("CONTRASEÑA")); // NOI18N
 
-        bClasificacion.setText("Ver Clasificacion");
+        bClasificacion.setText(bundle.getString("VER CLASIFICACION")); // NOI18N
         bClasificacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bClasificacionActionPerformed(evt);
             }
         });
 
-        bAceptar.setText("Aceptar");
+        bAceptar.setText(bundle.getString("ACEPTAR")); // NOI18N
         bAceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bAceptarActionPerformed(evt);
             }
         });
 
-        bCancelar.setText("Cancelar");
+        bCancelar.setText(bundle.getString("CANCELAR")); // NOI18N
         bCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bCancelarActionPerformed(evt);
             }
         });
 
-        bConexion.setText("Conexion BD");
+        bConexion.setText(bundle.getString("CONEXION BD")); // NOI18N
         bConexion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bConexionActionPerformed(evt);
@@ -171,7 +172,7 @@ public class InterfazIdentificarse extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if (java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle").getString("NIMBUS").equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

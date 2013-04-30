@@ -34,7 +34,8 @@ public class InterfazUsuarioDueno extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
 
-        jButton3.setText("Vender");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle"); // NOI18N
+        jButton3.setText(bundle.getString("VENDER")); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,23 +46,23 @@ public class InterfazUsuarioDueno extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jList1);
 
-        jButton1.setText("Ver clasificación");
+        jButton1.setText(bundle.getString("VER CLASIFICACIÓN")); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Vender");
+        jButton2.setText(bundle.getString("VENDER")); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Comprar");
+        jButton4.setText(bundle.getString("COMPRAR")); // NOI18N
 
-        jButton5.setText("Gestionar perros");
+        jButton5.setText(bundle.getString("GESTIONAR PERROS")); // NOI18N
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -126,7 +127,7 @@ public class InterfazUsuarioDueno extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if (java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle").getString("NIMBUS").equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

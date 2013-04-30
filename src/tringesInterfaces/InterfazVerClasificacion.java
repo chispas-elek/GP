@@ -51,11 +51,12 @@ public class InterfazVerClasificacion extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(jList2);
 
-        jLabel1.setText("Equipo");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle"); // NOI18N
+        jLabel1.setText(bundle.getString("EQUIPO")); // NOI18N
 
-        jLabel2.setText("Puntos");
+        jLabel2.setText(bundle.getString("PUNTOS")); // NOI18N
 
-        jButton1.setText("Aceptar");
+        jButton1.setText(bundle.getString("ACEPTAR")); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -119,7 +120,7 @@ public class InterfazVerClasificacion extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if (java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle").getString("NIMBUS").equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

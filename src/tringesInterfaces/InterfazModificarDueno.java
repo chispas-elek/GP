@@ -37,20 +37,21 @@ public class InterfazModificarDueno extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Nombre");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle"); // NOI18N
+        jLabel1.setText(bundle.getString("NOMBRE")); // NOI18N
 
-        jLabel2.setText("Usuario");
+        jLabel2.setText(bundle.getString("USUARIO")); // NOI18N
 
-        jLabel3.setText("Contraseña");
+        jLabel3.setText(bundle.getString("CONTRASEÑA")); // NOI18N
 
-        jButton1.setText("Cancelar");
+        jButton1.setText(bundle.getString("CANCELAR")); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Aceptar");
+        jButton2.setText(bundle.getString("ACEPTAR")); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -122,7 +123,7 @@ public class InterfazModificarDueno extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if (java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle").getString("NIMBUS").equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

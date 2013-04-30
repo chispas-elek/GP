@@ -33,7 +33,8 @@ public class InterfazGestionarDuenos extends javax.swing.JFrame {
         bAnyadir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Tringes -Gestionar dueños-");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle"); // NOI18N
+        setTitle(bundle.getString("TRINGES -GESTIONAR DUEÑOS-")); // NOI18N
 
         lCampeonatos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -42,7 +43,7 @@ public class InterfazGestionarDuenos extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(lCampeonatos);
 
-        bModificar.setText("Modificar dueño");
+        bModificar.setText(bundle.getString("MODIFICAR DUEÑO")); // NOI18N
         bModificar.setEnabled(false);
         bModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,7 +51,7 @@ public class InterfazGestionarDuenos extends javax.swing.JFrame {
             }
         });
 
-        bBorrar.setText("Desactivar dueño");
+        bBorrar.setText(bundle.getString("DESACTIVAR DUEÑO")); // NOI18N
         bBorrar.setEnabled(false);
         bBorrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,7 +59,7 @@ public class InterfazGestionarDuenos extends javax.swing.JFrame {
             }
         });
 
-        bAnyadir.setText("Añadir dueño");
+        bAnyadir.setText(bundle.getString("AÑADIR DUEÑO")); // NOI18N
         bAnyadir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bAnyadirActionPerformed(evt);
@@ -137,7 +138,7 @@ public class InterfazGestionarDuenos extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if (java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle").getString("NIMBUS").equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

@@ -41,34 +41,35 @@ public class InterfazAnadirClub extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Nombre");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle"); // NOI18N
+        jLabel1.setText(bundle.getString("NOMBRE")); // NOI18N
 
-        jLabel2.setText("Usuario");
+        jLabel2.setText(bundle.getString("USUARIO")); // NOI18N
 
-        jLabel3.setText("Contraseña");
+        jLabel3.setText(bundle.getString("CONTRASEÑA")); // NOI18N
 
-        jLabel4.setText("Patrocinador Principal");
+        jLabel4.setText(bundle.getString("PATROCINADOR PRINCIPAL")); // NOI18N
 
-        jLabel5.setText("Nº Perros");
+        jLabel5.setText(bundle.getString("Nº PERROS")); // NOI18N
 
-        jTextField1.setText("jTextField1");
+        jTextField1.setText(bundle.getString("JTEXTFIELD1")); // NOI18N
 
-        jTextField2.setText("jTextField2");
+        jTextField2.setText(bundle.getString("JTEXTFIELD2")); // NOI18N
 
-        jTextField3.setText("jTextField3");
+        jTextField3.setText(bundle.getString("JTEXTFIELD3")); // NOI18N
 
-        jTextField4.setText("jTextField4");
+        jTextField4.setText(bundle.getString("JTEXTFIELD4")); // NOI18N
 
-        jTextField5.setText("jTextField5");
+        jTextField5.setText(bundle.getString("JTEXTFIELD5")); // NOI18N
 
-        jButton1.setText("Aceptar");
+        jButton1.setText(bundle.getString("ACEPTAR")); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Cancelar");
+        jButton2.setText(bundle.getString("CANCELAR")); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -166,7 +167,7 @@ public class InterfazAnadirClub extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if (java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle").getString("NIMBUS").equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

@@ -35,27 +35,28 @@ public class InterfazInscripcionEnCarrera extends javax.swing.JFrame {
         bCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Tringes -Inscripcion en carrera-");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle"); // NOI18N
+        setTitle(bundle.getString("TRINGES -INSCRIPCION EN CARRERA-")); // NOI18N
 
-        jLabel4.setText("Nombre trineo");
+        jLabel4.setText(bundle.getString("NOMBRE TRINEO")); // NOI18N
 
-        jLabel5.setText("Nombre piloto");
+        jLabel5.setText(bundle.getString("NOMBRE PILOTO")); // NOI18N
 
-        verPerros.setText("Añadir nombres perros");
+        verPerros.setText(bundle.getString("AÑADIR NOMBRES PERROS")); // NOI18N
         verPerros.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 verPerrosActionPerformed(evt);
             }
         });
 
-        bAceptar.setText("Aceptar");
+        bAceptar.setText(bundle.getString("ACEPTAR")); // NOI18N
         bAceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bAceptarActionPerformed(evt);
             }
         });
 
-        bCancelar.setText("Cancelar");
+        bCancelar.setText(bundle.getString("CANCELAR")); // NOI18N
         bCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bCancelarActionPerformed(evt);
@@ -144,7 +145,7 @@ public class InterfazInscripcionEnCarrera extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if (java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle").getString("NIMBUS").equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
