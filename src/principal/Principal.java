@@ -12,7 +12,6 @@ import tringesControlador.UnionBD;
  */
 public class Principal {
     
-    Idioma idioma = new Idioma();
     
     public static void main(String args[]) {
         
