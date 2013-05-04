@@ -12,11 +12,15 @@ import tringesControlador.UnionBD;
  */
 public class Principal {
     
+    Idioma idioma = new Idioma();
+    
     public static void main(String args[]) {
+        
+        
      
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new InterfazIdentificarse().setVisible(true);
+                new InterfazIdentificarse("tringesInterfaces/Idioma").setVisible(true);
             }
         });
         
