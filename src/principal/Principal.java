@@ -3,6 +3,7 @@
  * and open the template in the editor.
  */
 package principal;
+
 import tringesInterfaces.InterfazIdentificarse;
 import tringesControlador.UnionBD;
 
@@ -15,8 +16,7 @@ public class Principal {
     
     public static void main(String args[]) {
         
-        
-     
+
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new InterfazIdentificarse("tringesInterfaces/Idioma").setVisible(true);
@@ -27,8 +27,7 @@ public class Principal {
         
         UnionBD unionADB = new UnionBD();
         
-        
-        
+ 
     }    
     
 }
