@@ -38,7 +38,7 @@ public class InterfazBannerErrorAlta extends javax.swing.JFrame {
         jLabel2.setText(bundle.getString("CONSULTE CON EL ADMINISTRADOR.")); // NOI18N
 
         jButton1.setText(bundle.getString("ACEPTAR")); // NOI18N
-        jButton1.setActionCommand(bundle.getString("")); // NOI18N
+        jButton1.setActionCommand("null");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

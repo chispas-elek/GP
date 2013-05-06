@@ -51,7 +51,7 @@ public class InterfazGestionarCampeonatos extends javax.swing.JFrame {
         tBuscar.setText(bundle.getString("BUSCAR CAMPEONATO...")); // NOI18N
 
         bBuscar.setText(bundle.getString("BUSCAR")); // NOI18N
-        bBuscar.setToolTipText(bundle.getString("")); // NOI18N
+        bBuscar.setToolTipText("null");
         bBuscar.setEnabled(false);
         bBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

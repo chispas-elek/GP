@@ -64,7 +64,7 @@ public class InterfazGestionarCarreras extends javax.swing.JFrame {
         });
 
         bBuscar.setText(bundle.getString("BUSCAR")); // NOI18N
-        bBuscar.setToolTipText(bundle.getString("")); // NOI18N
+        bBuscar.setToolTipText("null");
         bBuscar.setEnabled(false);
 
         bAnyadir.setText(bundle.getString("AÑADIR CARRERA")); // NOI18N
