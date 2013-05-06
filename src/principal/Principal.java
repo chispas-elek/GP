@@ -19,7 +19,7 @@ public class Principal {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new InterfazIdentificarse("tringesInterfaces/Idioma").setVisible(true);
+                new InterfazIdentificarse().setVisible(true);
             }
         });
         
