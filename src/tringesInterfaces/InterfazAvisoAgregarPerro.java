@@ -4,6 +4,7 @@
  */
 package tringesInterfaces;
 
+import tringesControlador.UnionBD;
 /**
  *
  * @author administrador
@@ -80,6 +81,8 @@ public class InterfazAvisoAgregarPerro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        UnionBD u = new UnionBD();
+        u.anadirPerro(InterfazAnadirPerros.jTextField1.getText(), null, null, null, null, null);
         InterfazAvisoAgregarPerro.this.setVisible(false);
         InterfazBannerAgregarPerro ibap = new InterfazBannerAgregarPerro();
         ibap.setVisible(true);

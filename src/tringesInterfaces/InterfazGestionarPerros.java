@@ -25,6 +25,7 @@ public class InterfazGestionarPerros extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         tBuscar = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -39,6 +40,11 @@ public class InterfazGestionarPerros extends javax.swing.JFrame {
         setTitle(bundle.getString("TRINGES -GESTIONAR PERROS-")); // NOI18N
 
         tBuscar.setText(bundle.getString("BUSCAR PERRO...")); // NOI18N
+
+        org.jdesktop.beansbinding.ELProperty eLProperty = org.jdesktop.beansbinding.ELProperty.create("");
+        org.jdesktop.swingbinding.JListBinding jListBinding = org.jdesktop.swingbinding.SwingBindings.createJListBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, lCampeonatos, eLProperty, lCampeonatos);
+        jListBinding.setDetailBinding(org.jdesktop.beansbinding.ELProperty.create(""));
+        bindingGroup.addBinding(jListBinding);
 
         lCampeonatos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -127,6 +133,8 @@ public class InterfazGestionarPerros extends javax.swing.JFrame {
                 .addContainerGap(53, Short.MAX_VALUE))
         );
 
+        bindingGroup.bind();
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -201,5 +209,6 @@ public class InterfazGestionarPerros extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JList lCampeonatos;
     private javax.swing.JTextField tBuscar;
+    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }

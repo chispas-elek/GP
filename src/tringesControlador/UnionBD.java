@@ -22,18 +22,52 @@ public class UnionBD {
     private Statement st = null;
     private ResultSet rs = null;
     
-    private String url = "jdbc:mysql://localhost:3306/testdb";
-    private String user = "root";
-    private String password = "4573rix";
+    private String url = "jdbc:mysql://localhost:3306/tringes";
+    private String user = "tringes";
+    private String password = "tringes";
     
-    /*
+    public UnionBD() {
+        
+    }
     
-    public void anadirCachorro(String pPadre, String pMadre, Date pFecha) {
+    private void conectar() {
+        try{
+           this.con = DriverManager.getConnection(url, user, password);
+        }
+        catch(SQLException e) {
+            System.out.println("No se ha podido abrir conexion a base de datos");
+        }
+    }
+    
+    private void desconectar() {
+        try{
+           this.con.close();
+        }
+        catch(SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public int insertar(String pDato) {
+        int result = 1;
+        this.conectar();
+        try {
+            this.st = this.con.createStatement();
+            rs = this.st.executeQuery(pDato);
+        }
+        catch(SQLException e) {
+            
+        }
+        this.desconectar();
+        return result;
+    }
+    
+    public void anadirPerro(String pNombre, String pRaza, String pSexo, String pDueno, String pClub, String pCarrera) {
     
         try {
-            con = DriverManager.getConnection(url, user, password);
+            con = 
             st = con.createStatement();
-            rs = st.executeQuery("INSERT INTO cachorros VALUES (" + pPadre + "," + pMadre + "," + pFecha + ");");
+            rs = st.executeQuery("INSERT INTO perros VALUES (" + pNombre + "," + pRaza + "," + pSexo + "," + pDueno + "," + pClub + "," + pCarrera + ");");
 
             if (rs.next()) {
                 System.out.println(rs.getString(1));
@@ -58,7 +92,7 @@ public class UnionBD {
                 ex.printStackTrace();
             }
         }
-    }
+    }/*
     public void anadirCampeonato(String pNombre, Date pFecha) {
     
         try {
@@ -1100,5 +1134,5 @@ public class UnionBD {
             }
         }
     }
-    */
 }
+*/ }
