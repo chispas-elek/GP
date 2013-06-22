@@ -25,13 +25,13 @@ public class InterfazAnadirPerros extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
+        /*bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         entityManager = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("tringes?zeroDateTimeBehavior=convertToNullPU").createEntityManager();
         clubsQuery = java.beans.Beans.isDesignTime() ? null : entityManager.createQuery("SELECT c FROM Clubs c");
         clubsList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : clubsQuery.getResultList();
         duenosQuery = java.beans.Beans.isDesignTime() ? null : entityManager.createQuery("SELECT d FROM Duenos d");
-        duenosList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : duenosQuery.getResultList();
+        duenosList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : duenosQuery.getResultList();*/
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -72,12 +72,11 @@ public class InterfazAnadirPerros extends javax.swing.JFrame {
             }
         });
 
-        org.jdesktop.swingbinding.JComboBoxBinding jComboBoxBinding = org.jdesktop.swingbinding.SwingBindings.createJComboBoxBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, duenosList, jComboBox1);
-        bindingGroup.addBinding(jComboBoxBinding);
+       /* org.jdesktop.swingbinding.JComboBoxBinding jComboBoxBinding = org.jdesktop.swingbinding.SwingBindings.createJComboBoxBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, duenosList, jComboBox1);
+        bindingGroup.addBinding(jComboBoxBinding);*/
 
-        jComboBoxBinding = org.jdesktop.swingbinding.SwingBindings.createJComboBoxBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, clubsList, jComboBox2);
-        bindingGroup.addBinding(jComboBoxBinding);
-
+        /*jComboBoxBinding = org.jdesktop.swingbinding.SwingBindings.createJComboBoxBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, clubsList, jComboBox2);
+        bindingGroup.addBinding(jComboBoxBinding);*/
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -141,7 +140,7 @@ public class InterfazAnadirPerros extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        bindingGroup.bind();
+       // bindingGroup.bind();
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

@@ -103,12 +103,15 @@
         <Component class="javax.swing.JList" name="lCampeonatos">
           <Properties>
             <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-              <StringArray count="0"/>
+              <StringArray count="1">
+                <StringItem index="0" value="Lur"/>
+              </StringArray>
             </Property>
           </Properties>
           <BindingProperties>
-            <BindingProperty name="elements" source="lCampeonatos" sourcePath="" target="lCampeonatos" targetPath="elements" updateStrategy="0" immediately="false">
-              <BindingParameter name="DISPLAY" value=""/>
+            <BindingProperty name="elements" source="Form" sourcePath="" target="lCampeonatos" targetPath="elements" updateStrategy="0" immediately="false">
+              <BindingParameter name="DISPLAY" value="${}"/>
+              <Property name="name" type="java.lang.String" value=""/>
             </BindingProperty>
           </BindingProperties>
           <Events>

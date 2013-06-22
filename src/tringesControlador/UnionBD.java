@@ -64,7 +64,7 @@ public class UnionBD {
     
     public void anadirPerro(String pNombre, String pRaza, String pSexo, String pDueno, String pClub, String pCarrera) {
     
-        try {
+        /*try {
             con = 
             st = con.createStatement();
             rs = st.executeQuery("INSERT INTO perros VALUES (" + pNombre + "," + pRaza + "," + pSexo + "," + pDueno + "," + pClub + "," + pCarrera + ");");
@@ -92,7 +92,7 @@ public class UnionBD {
                 ex.printStackTrace();
             }
         }
-    }/*
+    }*//*
     public void anadirCampeonato(String pNombre, Date pFecha) {
     
         try {
@@ -1135,4 +1135,6 @@ public class UnionBD {
         }
     }
 }
-*/ }
+*/ 
+    }
+}

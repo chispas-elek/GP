@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package tringesInterfaces;
 
 /**
@@ -41,10 +37,16 @@ public class InterfazGestionarPerros extends javax.swing.JFrame {
 
         tBuscar.setText(bundle.getString("BUSCAR PERRO...")); // NOI18N
 
-        org.jdesktop.beansbinding.ELProperty eLProperty = org.jdesktop.beansbinding.ELProperty.create("");
-        org.jdesktop.swingbinding.JListBinding jListBinding = org.jdesktop.swingbinding.SwingBindings.createJListBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, lCampeonatos, eLProperty, lCampeonatos);
-        jListBinding.setDetailBinding(org.jdesktop.beansbinding.ELProperty.create(""));
-        bindingGroup.addBinding(jListBinding);
+        lCampeonatos.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Lur" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+
+        /*org.jdesktop.beansbinding.ELProperty eLProperty = org.jdesktop.beansbinding.ELProperty.create("");
+        org.jdesktop.swingbinding.JListBinding jListBinding = org.jdesktop.swingbinding.SwingBindings.createJListBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, eLProperty, lCampeonatos, "");
+        jListBinding.setDetailBinding(org.jdesktop.beansbinding.ELProperty.create("${}"));
+        bindingGroup.addBinding(jListBinding);*/
 
         lCampeonatos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -133,7 +135,7 @@ public class InterfazGestionarPerros extends javax.swing.JFrame {
                 .addContainerGap(53, Short.MAX_VALUE))
         );
 
-        bindingGroup.bind();
+        //bindingGroup.bind();
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

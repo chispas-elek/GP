@@ -36,6 +36,11 @@ public class InterfazGestionarDuenos extends javax.swing.JFrame {
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle"); // NOI18N
         setTitle(bundle.getString("TRINGES -GESTIONAR DUEÑOS-")); // NOI18N
 
+        lCampeonatos.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Aaron" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
         lCampeonatos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lCampeonatosMouseClicked(evt);

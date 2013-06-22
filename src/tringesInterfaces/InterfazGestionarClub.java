@@ -40,6 +40,11 @@ public class InterfazGestionarClub extends javax.swing.JFrame {
 
         tBuscar.setText(bundle.getString("BUSCAR CLUB...")); // NOI18N
 
+        lCampeonatos.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "ClubPepe" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
         lCampeonatos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lCampeonatosMouseClicked(evt);

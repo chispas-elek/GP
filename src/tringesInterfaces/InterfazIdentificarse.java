@@ -1,4 +1,3 @@
-
 package tringesInterfaces;
 
 import java.awt.Dimension;
@@ -36,7 +35,7 @@ public class InterfazIdentificarse extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("tringesInterfaces/Idioma"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle"); // NOI18N
         setTitle(bundle.getString("TRINGES -IDENTIFICACION-")); // NOI18N
 
         jLabel1.setText(bundle.getString("USUARIO")); // NOI18N

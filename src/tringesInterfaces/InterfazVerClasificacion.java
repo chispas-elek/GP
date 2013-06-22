@@ -37,11 +37,22 @@ public class InterfazVerClasificacion extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jList1.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "ClubPepe" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle"); // NOI18N
+        jList1.setToolTipText(bundle.getString("InterfazVerClasificacion.jList1.toolTipText")); // NOI18N
         jScrollPane1.setViewportView(jList1);
 
+        jList2.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "0" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
         jScrollPane2.setViewportView(jList2);
 
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle"); // NOI18N
         jLabel1.setText(bundle.getString("EQUIPO")); // NOI18N
 
         jLabel2.setText(bundle.getString("PUNTOS")); // NOI18N
