@@ -1,5 +1,10 @@
 package tringesInterfaces;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.DefaultListModel;
+import tringesControlador.UnionBD;
+
 /**
  *
  * @author Aaron
@@ -11,6 +16,20 @@ public class InterfazGestionarPerros extends javax.swing.JFrame {
      */
     public InterfazGestionarPerros() {
         initComponents();
+        
+        lPerros.removeAll();
+        UnionBD u = new UnionBD();
+        ResultSet rs = u.ejecutarSentencia("SELECT nombre from PERROS;");
+        DefaultListModel lm = new DefaultListModel();
+        try {
+            while(rs.next()){
+               lm.addElement(rs.getObject(1));
+            }
+            lPerros.setModel(lm);
+            u.desconectar();
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -25,7 +44,7 @@ public class InterfazGestionarPerros extends javax.swing.JFrame {
 
         tBuscar = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        lCampeonatos = new javax.swing.JList();
+        lPerros = new javax.swing.JList();
         bModificar = new javax.swing.JButton();
         bBorrar = new javax.swing.JButton();
         bBuscar = new javax.swing.JButton();
@@ -37,23 +56,23 @@ public class InterfazGestionarPerros extends javax.swing.JFrame {
 
         tBuscar.setText(bundle.getString("BUSCAR PERRO...")); // NOI18N
 
-        lCampeonatos.setModel(new javax.swing.AbstractListModel() {
+        lPerros.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Lur" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
 
-        /*org.jdesktop.beansbinding.ELProperty eLProperty = org.jdesktop.beansbinding.ELProperty.create("");
-        org.jdesktop.swingbinding.JListBinding jListBinding = org.jdesktop.swingbinding.SwingBindings.createJListBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, eLProperty, lCampeonatos, "");
+        org.jdesktop.beansbinding.ELProperty eLProperty = org.jdesktop.beansbinding.ELProperty.create("");
+        org.jdesktop.swingbinding.JListBinding jListBinding = org.jdesktop.swingbinding.SwingBindings.createJListBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, eLProperty, lPerros, "");
         jListBinding.setDetailBinding(org.jdesktop.beansbinding.ELProperty.create("${}"));
-        bindingGroup.addBinding(jListBinding);*/
+        bindingGroup.addBinding(jListBinding);
 
-        lCampeonatos.addMouseListener(new java.awt.event.MouseAdapter() {
+        lPerros.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lCampeonatosMouseClicked(evt);
+                lPerrosMouseClicked(evt);
             }
         });
-        jScrollPane1.setViewportView(lCampeonatos);
+        jScrollPane1.setViewportView(lPerros);
 
         bModificar.setText(bundle.getString("MODIFICAR PERRO")); // NOI18N
         bModificar.setEnabled(false);
@@ -135,7 +154,7 @@ public class InterfazGestionarPerros extends javax.swing.JFrame {
                 .addContainerGap(53, Short.MAX_VALUE))
         );
 
-        //bindingGroup.bind();
+        bindingGroup.bind();
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -163,11 +182,11 @@ public class InterfazGestionarPerros extends javax.swing.JFrame {
         String buscar = this.tBuscar.getText();
     }//GEN-LAST:event_bBuscarActionPerformed
 
-    private void lCampeonatosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lCampeonatosMouseClicked
+    private void lPerrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lPerrosMouseClicked
         // TODO add your handling code here:
         this.bBorrar.setEnabled(true);
         this.bModificar.setEnabled(true);
-    }//GEN-LAST:event_lCampeonatosMouseClicked
+    }//GEN-LAST:event_lPerrosMouseClicked
 
     /**
      * @param args the command line arguments
@@ -209,7 +228,7 @@ public class InterfazGestionarPerros extends javax.swing.JFrame {
     private javax.swing.JButton bBuscar;
     private javax.swing.JButton bModificar;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JList lCampeonatos;
+    private javax.swing.JList lPerros;
     private javax.swing.JTextField tBuscar;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables

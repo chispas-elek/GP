@@ -4,6 +4,11 @@
  */
 package tringesInterfaces;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.DefaultListModel;
+import tringesControlador.UnionBD;
+
 /**
  *
  * @author Aaron
@@ -15,6 +20,20 @@ public class InterfazGestionarDuenos extends javax.swing.JFrame {
      */
     public InterfazGestionarDuenos() {
         initComponents();
+        
+        lDuenos.removeAll();
+        UnionBD u = new UnionBD();
+        ResultSet rs = u.ejecutarSentencia("SELECT nombre from DUENOS;");
+        DefaultListModel lm = new DefaultListModel();
+        try {
+            while(rs.next()){
+               lm.addElement(rs.getObject(1));
+            }
+            lDuenos.setModel(lm);
+            u.desconectar();
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -27,7 +46,7 @@ public class InterfazGestionarDuenos extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        lCampeonatos = new javax.swing.JList();
+        lDuenos = new javax.swing.JList();
         bModificar = new javax.swing.JButton();
         bBorrar = new javax.swing.JButton();
         bAnyadir = new javax.swing.JButton();
@@ -36,17 +55,17 @@ public class InterfazGestionarDuenos extends javax.swing.JFrame {
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("tringesInterfaces/Bundle"); // NOI18N
         setTitle(bundle.getString("TRINGES -GESTIONAR DUEÑOS-")); // NOI18N
 
-        lCampeonatos.setModel(new javax.swing.AbstractListModel() {
+        lDuenos.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Aaron" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
-        lCampeonatos.addMouseListener(new java.awt.event.MouseAdapter() {
+        lDuenos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lCampeonatosMouseClicked(evt);
+                lDuenosMouseClicked(evt);
             }
         });
-        jScrollPane1.setViewportView(lCampeonatos);
+        jScrollPane1.setViewportView(lDuenos);
 
         bModificar.setText(bundle.getString("MODIFICAR DUEÑO")); // NOI18N
         bModificar.setEnabled(false);
@@ -126,11 +145,11 @@ public class InterfazGestionarDuenos extends javax.swing.JFrame {
         new InterfazAvisoDesactivarDueno().setVisible(true);
     }//GEN-LAST:event_bBorrarActionPerformed
 
-    private void lCampeonatosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lCampeonatosMouseClicked
+    private void lDuenosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lDuenosMouseClicked
         // TODO add your handling code here:
         this.bModificar.setEnabled(true);
         this.bBorrar.setEnabled(true);
-    }//GEN-LAST:event_lCampeonatosMouseClicked
+    }//GEN-LAST:event_lDuenosMouseClicked
 
     /**
      * @param args the command line arguments
@@ -171,6 +190,6 @@ public class InterfazGestionarDuenos extends javax.swing.JFrame {
     private javax.swing.JButton bBorrar;
     private javax.swing.JButton bModificar;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JList lCampeonatos;
+    private javax.swing.JList lDuenos;
     // End of variables declaration//GEN-END:variables
 }

@@ -4,6 +4,11 @@
  */
 package tringesInterfaces;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.DefaultListModel;
+import tringesControlador.UnionBD;
+
 /**
  *
  * @author Aaron
@@ -15,6 +20,33 @@ public class InterfazVerClasificacion extends javax.swing.JFrame {
      */
     public InterfazVerClasificacion() {
         initComponents(); 
+        
+         jList1.removeAll();
+        UnionBD u = new UnionBD();
+        ResultSet rs = u.ejecutarSentencia("SELECT nombre from CLUBS;");
+        DefaultListModel lm = new DefaultListModel();
+        try {
+            while(rs.next()){
+               lm.addElement(rs.getObject(1));
+            }
+            jList1.setModel(lm);
+            u.desconectar();
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+        jList2.removeAll();
+        rs = u.ejecutarSentencia("SELECT nombre from CARRERAS;");/*COUNT*/
+        lm = new DefaultListModel();
+        try {
+            while(rs.next()){
+               lm.addElement(rs.getObject(1));
+            }
+            jList2.setModel(lm);
+            u.desconectar();
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
         
     }
 

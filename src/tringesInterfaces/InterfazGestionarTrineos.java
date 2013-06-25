@@ -4,6 +4,11 @@
  */
 package tringesInterfaces;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.DefaultListModel;
+import tringesControlador.UnionBD;
+
 /**
  *
  * @author Aaron
@@ -15,6 +20,20 @@ public class InterfazGestionarTrineos extends javax.swing.JFrame {
      */
     public InterfazGestionarTrineos() {
         initComponents();
+        
+        lTrineos.removeAll();
+        UnionBD u = new UnionBD();
+        ResultSet rs = u.ejecutarSentencia("SELECT nombre from TRINEOS;");
+        DefaultListModel lm = new DefaultListModel();
+        try {
+            while(rs.next()){
+               lm.addElement(rs.getObject(1));
+            }
+            lTrineos.setModel(lm);
+            u.desconectar();
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -28,7 +47,7 @@ public class InterfazGestionarTrineos extends javax.swing.JFrame {
 
         tBuscar = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        lCampeonatos = new javax.swing.JList();
+        lTrineos = new javax.swing.JList();
         bModificar = new javax.swing.JButton();
         bBorrar = new javax.swing.JButton();
         bBuscar = new javax.swing.JButton();
@@ -40,17 +59,17 @@ public class InterfazGestionarTrineos extends javax.swing.JFrame {
 
         tBuscar.setText(bundle.getString("BUSCAR TRINEO...")); // NOI18N
 
-        lCampeonatos.setModel(new javax.swing.AbstractListModel() {
+        lTrineos.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "pro-esquis" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
-        lCampeonatos.addMouseListener(new java.awt.event.MouseAdapter() {
+        lTrineos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lCampeonatosMouseClicked(evt);
+                lTrineosMouseClicked(evt);
             }
         });
-        jScrollPane1.setViewportView(lCampeonatos);
+        jScrollPane1.setViewportView(lTrineos);
 
         bModificar.setText(bundle.getString("MODIFICAR TRINEO")); // NOI18N
         bModificar.setEnabled(false);
@@ -153,11 +172,11 @@ public class InterfazGestionarTrineos extends javax.swing.JFrame {
         new InterfazAvisoBorrarTrineo().setVisible(true);
     }//GEN-LAST:event_bBorrarActionPerformed
 
-    private void lCampeonatosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lCampeonatosMouseClicked
+    private void lTrineosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lTrineosMouseClicked
         // TODO add your handling code here:
         this.bModificar.setEnabled(true);
         this.bBorrar.setEnabled(true);
-    }//GEN-LAST:event_lCampeonatosMouseClicked
+    }//GEN-LAST:event_lTrineosMouseClicked
 
     private void bBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBuscarActionPerformed
         // TODO add your handling code here:
@@ -204,7 +223,7 @@ public class InterfazGestionarTrineos extends javax.swing.JFrame {
     private javax.swing.JButton bBuscar;
     private javax.swing.JButton bModificar;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JList lCampeonatos;
+    private javax.swing.JList lTrineos;
     private javax.swing.JTextField tBuscar;
     // End of variables declaration//GEN-END:variables
 }

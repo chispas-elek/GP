@@ -4,6 +4,11 @@
  */
 package tringesInterfaces;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.DefaultListModel;
+import tringesControlador.UnionBD;
+
 /**
  *
  * @author Aaron
@@ -15,6 +20,20 @@ public class InterfazGestionarCarreras extends javax.swing.JFrame {
      */
     public InterfazGestionarCarreras() {
         initComponents();
+        
+        lCarreras.removeAll();
+        UnionBD u = new UnionBD();
+        ResultSet rs = u.ejecutarSentencia("SELECT nombre from CARRERAS;");
+        DefaultListModel lm = new DefaultListModel();
+        try {
+            while(rs.next()){
+               lm.addElement(rs.getObject(1));
+            }
+            lCarreras.setModel(lm);
+            u.desconectar();
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -28,7 +47,7 @@ public class InterfazGestionarCarreras extends javax.swing.JFrame {
 
         tBuscar = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        lCampeonatos = new javax.swing.JList();
+        lCarreras = new javax.swing.JList();
         bModificar = new javax.swing.JButton();
         bBorrar = new javax.swing.JButton();
         bBuscar = new javax.swing.JButton();
@@ -40,17 +59,17 @@ public class InterfazGestionarCarreras extends javax.swing.JFrame {
 
         tBuscar.setText(bundle.getString("BUSCAR CARRERA...")); // NOI18N
 
-        lCampeonatos.setModel(new javax.swing.AbstractListModel() {
+        lCarreras.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "euskalherria" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
-        lCampeonatos.addMouseListener(new java.awt.event.MouseAdapter() {
+        lCarreras.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lCampeonatosMouseClicked(evt);
+                lCarrerasMouseClicked(evt);
             }
         });
-        jScrollPane1.setViewportView(lCampeonatos);
+        jScrollPane1.setViewportView(lCarreras);
 
         bModificar.setText(bundle.getString("MODIFICAR CARRERA")); // NOI18N
         bModificar.setEnabled(false);
@@ -146,11 +165,11 @@ public class InterfazGestionarCarreras extends javax.swing.JFrame {
         new InterfazAvisoBorrarCarrera().setVisible(true);
     }//GEN-LAST:event_bBorrarActionPerformed
 
-    private void lCampeonatosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lCampeonatosMouseClicked
+    private void lCarrerasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lCarrerasMouseClicked
         // TODO add your handling code here:
         this.bModificar.setEnabled(true);
         this.bBorrar.setEnabled(true);
-    }//GEN-LAST:event_lCampeonatosMouseClicked
+    }//GEN-LAST:event_lCarrerasMouseClicked
 
     /**
      * @param args the command line arguments
@@ -192,7 +211,7 @@ public class InterfazGestionarCarreras extends javax.swing.JFrame {
     private javax.swing.JButton bBuscar;
     private javax.swing.JButton bModificar;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JList lCampeonatos;
+    private javax.swing.JList lCarreras;
     private javax.swing.JTextField tBuscar;
     // End of variables declaration//GEN-END:variables
 }

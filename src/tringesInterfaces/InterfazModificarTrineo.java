@@ -4,6 +4,10 @@
  */
 package tringesInterfaces;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import tringesControlador.UnionBD;
+
 /**
  *
  * @author Aaron
@@ -15,6 +19,18 @@ public class InterfazModificarTrineo extends javax.swing.JFrame {
      */
     public InterfazModificarTrineo() {
         initComponents();
+        
+        jComboBox1.removeAllItems();
+        UnionBD u = new UnionBD();
+        ResultSet rs = u.ejecutarSentencia("SELECT lugar from CLUBS;");
+        try {
+            while(rs.next()){
+                jComboBox1.addItem(rs.getObject(1));
+            }
+            u.desconectar();
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     /**

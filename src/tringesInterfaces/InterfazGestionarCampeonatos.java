@@ -4,6 +4,12 @@
  */
 package tringesInterfaces;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.DefaultListModel;
+import tringesControlador.UnionBD;
+import static tringesInterfaces.InterfazAnadirPerros.jComboBox3;
+
 /**
  *
  * @author Aaron
@@ -15,6 +21,20 @@ public class InterfazGestionarCampeonatos extends javax.swing.JFrame {
      */
     public InterfazGestionarCampeonatos() {
         initComponents();
+        
+        lCampeonatos.removeAll();
+        UnionBD u = new UnionBD();
+        ResultSet rs = u.ejecutarSentencia("SELECT nombre from CAMPEONATOS;");
+        DefaultListModel lm = new DefaultListModel();
+        try {
+            while(rs.next()){
+               lm.addElement(rs.getObject(1));
+            }
+            lCampeonatos.setModel(lm);
+            u.desconectar();
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     /**

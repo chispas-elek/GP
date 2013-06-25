@@ -4,6 +4,12 @@
  */
 package tringesInterfaces;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.DefaultListModel;
+import tringesControlador.UnionBD;
+import static tringesInterfaces.InterfazAnadirPerros.jComboBox3;
+
 /**
  *
  * @author Aaron
@@ -15,6 +21,42 @@ public class InterfazModificarPerro extends javax.swing.JFrame {
      */
     public InterfazModificarPerro() {
         initComponents();
+        
+        lCachorros.removeAll();
+        UnionBD u = new UnionBD();
+        ResultSet rs = u.ejecutarSentencia("SELECT nombre from CACHORROS where padre=" + jTextField1.getText() + " or madre=" + jTextField1.getText() + ";");
+        DefaultListModel lm = new DefaultListModel();
+        try {
+            while(rs.next()){
+               lm.addElement(rs.getObject(1));
+            }
+            lCachorros.setModel(lm);
+            u.desconectar();
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+        jComboBox2.removeAllItems();
+        rs = u.ejecutarSentencia("SELECT nombre from DUENOS;");
+        try {
+            while(rs.next()){
+                jComboBox2.addItem(rs.getObject(1));
+            }
+            u.desconectar();
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+        jComboBox1.removeAllItems();
+        rs = u.ejecutarSentencia("SELECT nombre from CLUBS;");
+        try {
+            while(rs.next()){
+                jComboBox1.addItem(rs.getObject(1));
+            }
+            u.desconectar();
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -39,7 +81,7 @@ public class InterfazModificarPerro extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList();
+        lCachorros = new javax.swing.JList();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
@@ -86,12 +128,12 @@ public class InterfazModificarPerro extends javax.swing.JFrame {
 
         jButton4.setText(bundle.getString("BORRAR")); // NOI18N
 
-        jList1.setModel(new javax.swing.AbstractListModel() {
+        lCachorros.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane1.setViewportView(jList1);
+        jScrollPane1.setViewportView(lCachorros);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -228,10 +270,10 @@ public class InterfazModificarPerro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JList jList1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JList lCachorros;
     // End of variables declaration//GEN-END:variables
 }
