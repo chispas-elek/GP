@@ -225,7 +225,7 @@ public class InterfazAnadirPerros extends javax.swing.JFrame {
     private javax.persistence.EntityManager entityManager;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox jComboBox1;
+    public static javax.swing.JComboBox jComboBox1;
     public static javax.swing.JComboBox jComboBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

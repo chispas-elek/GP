@@ -4,6 +4,8 @@
  */
 package tringesInterfaces;
 
+import tringesControlador.UnionBD;
+
 /**
  *
  * @author Aaron
@@ -80,6 +82,9 @@ public class InterfazAvisoAnadirClub extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        UnionBD u = new UnionBD();
+        u.ejecutarSentenciaInsert("INSERT INTO clubs (nombre,usuario,patrocinador,numperros) VALUES ('"+InterfazAnadirClub.jTextField1.getText()+"','"+InterfazAnadirClub.jTextField2.getText()+"','"+InterfazAnadirClub.jTextField3.getText()+"','"+InterfazAnadirClub.jTextField4.getText()+"',"+Integer.parseInt(InterfazAnadirClub.jTextField5.getText())+");");
+        u.desconectar();
         InterfazAvisoAnadirClub.this.setVisible(false);
         InterfazBannerClubRegistradoSistema ibac = new InterfazBannerClubRegistradoSistema();
         ibac.setVisible(true);

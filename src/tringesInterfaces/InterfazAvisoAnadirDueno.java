@@ -4,6 +4,8 @@
  */
 package tringesInterfaces;
 
+import tringesControlador.UnionBD;
+
 /**
  *
  * @author Aaron
@@ -80,6 +82,9 @@ public class InterfazAvisoAnadirDueno extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        UnionBD u = new UnionBD();
+        u.ejecutarSentenciaInsert("INSERT INTO duenos(nombre,apellidos,usuario) VALUES('"+InterfazAnadirDueno.jTextField1.getText()+"','"+InterfazAnadirDueno.jTextField2.getText()+"','"+InterfazAnadirDueno.jTextField3.getText()+"');");
+        u.desconectar();
         InterfazAvisoAnadirDueno.this.setVisible(false);
         InterfazBannerDuenoRegistradoSistema ibdrs = new InterfazBannerDuenoRegistradoSistema();
         ibdrs.setVisible(true);

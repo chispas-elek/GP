@@ -52,12 +52,24 @@ public class UnionBD {
         this.conectar();
         try {
             this.st = this.con.createStatement();
-            rs = this.st.executeQuery(pDato);
+            this.rs = this.st.executeQuery(pDato);
         }
         catch(SQLException e) {
             System.out.println("No se ha podido realizar la consulta de forma correcta, por favor revisa la sentencia SQL");
         }
         return this.rs;
+    }
+    
+    public int ejecutarSentenciaInsert(String pDato) {
+        int resultado = 0;
+        this.conectar();
+        try{
+            this.st = this.con.createStatement();
+            resultado = this.st.executeUpdate(pDato);
+        }catch(SQLException e) {
+            System.out.println("No se ha podido insertar los datos de forma correcta, por favor revisa la sentencia SQL");
+        }
+        return resultado;
     }
     
     /*public void anadirPerro(String pNombre, String pRaza, String pSexo, String pDueno, String pClub, String pCarrera) {

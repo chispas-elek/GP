@@ -55,6 +55,11 @@ public class InterfazAnadirPerrosACarrera extends javax.swing.JFrame {
         jButton1.setText(bundle.getString("BUSCAR")); // NOI18N
 
         jButton2.setText(bundle.getString("AÑADIR")); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText(bundle.getString("CANCELAR")); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -136,6 +141,10 @@ public class InterfazAnadirPerrosACarrera extends javax.swing.JFrame {
         InterfazInscripcionEnCarrera iiec = new InterfazInscripcionEnCarrera();
         iiec.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

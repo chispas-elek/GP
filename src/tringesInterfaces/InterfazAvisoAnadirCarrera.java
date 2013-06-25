@@ -4,6 +4,8 @@
  */
 package tringesInterfaces;
 
+import tringesControlador.UnionBD;
+
 /**
  *
  * @author will
@@ -88,6 +90,9 @@ public class InterfazAvisoAnadirCarrera extends javax.swing.JFrame {
 
     private void bAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAceptarActionPerformed
         // TODO add your handling code here:
+        UnionBD u = new UnionBD();
+        u.ejecutarSentenciaInsert("INSERT INTO carreras (lugar,recorrido,maxperros) VALUES ('"+InterfazAnadirCarreras.jTextField1.getText()+"',"+Integer.parseInt(InterfazAnadirCarreras.jTextField2.getText())+","+Integer.parseInt(InterfazAnadirCarreras.jTextField3.getText())+");");
+        u.desconectar();
         this.dispose();
         new InterfazBannerAnadirCarrera().setVisible(true);
         //Acceso a base datos

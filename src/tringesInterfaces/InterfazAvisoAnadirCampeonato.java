@@ -4,6 +4,8 @@
  */
 package tringesInterfaces;
 
+import tringesControlador.UnionBD;
+
 /**
  *
  * @author Aaron
@@ -80,6 +82,9 @@ public class InterfazAvisoAnadirCampeonato extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        UnionBD u = new UnionBD();
+        u.ejecutarSentenciaInsert("INSERT into campeonatos(nombre,fecha) VALUES ('"+InterfazAnadirCampeonato.jTextField1.getText()+"','"+InterfazAnadirCampeonato.jTextField2.getText()+"');");
+        u.desconectar();
         InterfazAvisoAnadirCampeonato.this.setVisible(false);
         InterfazBannerCampeonatoAnadidoSatisfactorimente ibcas = new InterfazBannerCampeonatoAnadidoSatisfactorimente();
         ibcas.setVisible(true);

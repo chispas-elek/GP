@@ -82,7 +82,9 @@ public class InterfazAvisoAgregarPerro extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         UnionBD u = new UnionBD();
-        //u.anadirPerro(InterfazAnadirPerros.jTextField1.getText(), null, null, null, null, null);
+        //System.out.println("Datos del combo "+InterfazAnadirPerros.jComboBox1.getItemAt(InterfazAnadirPerros.jComboBox1.getSelectedIndex()));
+        u.ejecutarSentenciaInsert("INSERT INTO perros(nombre,raza,sexo,dueno,club,carrera) VALUES ('" + InterfazAnadirPerros.jTextField1.getText() + "','" + InterfazAnadirPerros.jTextField2.getText() + "','" + InterfazAnadirPerros.jTextField3.getText() + "','" + InterfazAnadirPerros.jComboBox3.getItemAt(InterfazAnadirPerros.jComboBox3.getSelectedIndex()) + "','" + InterfazAnadirPerros.jComboBox1.getItemAt(InterfazAnadirPerros.jComboBox1.getSelectedIndex()) +"','');");
+        u.desconectar();
         InterfazAvisoAgregarPerro.this.setVisible(false);
         InterfazBannerAgregarPerro ibap = new InterfazBannerAgregarPerro();
         ibap.setVisible(true);
