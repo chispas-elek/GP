@@ -39,7 +39,7 @@ public class UnionBD {
         }
     }
     
-    private void desconectar() {
+    public void desconectar() {
         try{
            this.con.close();
         }
@@ -48,23 +48,21 @@ public class UnionBD {
         }
     }
     
-    public int insertar(String pDato) {
-        int result = 1;
+    public ResultSet ejecutarSentencia(String pDato) {
         this.conectar();
         try {
             this.st = this.con.createStatement();
             rs = this.st.executeQuery(pDato);
         }
         catch(SQLException e) {
-            
+            System.out.println("No se ha podido realizar la consulta de forma correcta, por favor revisa la sentencia SQL");
         }
-        this.desconectar();
-        return result;
+        return this.rs;
     }
     
-    public void anadirPerro(String pNombre, String pRaza, String pSexo, String pDueno, String pClub, String pCarrera) {
+    /*public void anadirPerro(String pNombre, String pRaza, String pSexo, String pDueno, String pClub, String pCarrera) {
     
-        /*try {
+        try {
             con = 
             st = con.createStatement();
             rs = st.executeQuery("INSERT INTO perros VALUES (" + pNombre + "," + pRaza + "," + pSexo + "," + pDueno + "," + pClub + "," + pCarrera + ");");
@@ -1135,6 +1133,6 @@ public class UnionBD {
         }
     }
 }
-*/ 
-    }
+ 
+    }*/
 }
