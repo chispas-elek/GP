@@ -17,7 +17,7 @@ public class InterfazGestionarPerros extends javax.swing.JFrame {
     public InterfazGestionarPerros() {
         initComponents();
         
-        /*lPerros.removeAll();
+        lPerros.removeAll();
         UnionBD u = new UnionBD();
         ResultSet rs = u.ejecutarSentencia("SELECT nombre from PERROS;");
         DefaultListModel lm = new DefaultListModel();
@@ -29,7 +29,7 @@ public class InterfazGestionarPerros extends javax.swing.JFrame {
             u.desconectar();
         }catch (SQLException e) {
             e.printStackTrace();
-        }*/
+        }
     }
 
     /**
