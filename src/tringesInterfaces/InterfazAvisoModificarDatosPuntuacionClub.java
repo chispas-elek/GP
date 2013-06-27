@@ -4,6 +4,8 @@
  */
 package tringesInterfaces;
 
+import tringesControlador.UnionBD;
+
 /**
  *
  * @author Aaron
@@ -79,6 +81,9 @@ public class InterfazAvisoModificarDatosPuntuacionClub extends javax.swing.JFram
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        UnionBD u = new UnionBD();
+        u.ejecutarSentenciaInsert("UPDATE resultados set puntos="+Integer.parseInt(InterfazModificarResultados.jTextField1.getText())+" where carrera='"+InterfazModificarResultados.jComboBox1.getItemAt(InterfazModificarResultados.jComboBox1.getSelectedIndex())+"' and club='"+InterfazModificarResultados.jComboBox2.getItemAt(InterfazModificarResultados.jComboBox2.getSelectedIndex())+"';");
+        u.desconectar();
         new InterfazBannerPuntosCarreraOtorgadosClub().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed

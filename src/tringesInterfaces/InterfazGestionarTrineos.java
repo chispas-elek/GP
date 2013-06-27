@@ -23,7 +23,7 @@ public class InterfazGestionarTrineos extends javax.swing.JFrame {
         
         lTrineos.removeAll();
         UnionBD u = new UnionBD();
-        ResultSet rs = u.ejecutarSentencia("SELECT nombre from TRINEOS;");
+        ResultSet rs = u.ejecutarSentencia("SELECT fabricante from TRINEOS;");
         DefaultListModel lm = new DefaultListModel();
         try {
             while(rs.next()){

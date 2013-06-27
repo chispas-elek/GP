@@ -22,7 +22,7 @@ public class InterfazModificarTrineo extends javax.swing.JFrame {
         
         jComboBox1.removeAllItems();
         UnionBD u = new UnionBD();
-        ResultSet rs = u.ejecutarSentencia("SELECT lugar from CLUBS;");
+        ResultSet rs = u.ejecutarSentencia("SELECT nombre from CLUBS;");
         try {
             while(rs.next()){
                 jComboBox1.addItem(rs.getObject(1));
@@ -172,11 +172,11 @@ public class InterfazModificarTrineo extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
+    public static javax.swing.JComboBox jComboBox1;
+    public static javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
+    public static javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

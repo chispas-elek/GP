@@ -4,6 +4,8 @@
  */
 package tringesInterfaces;
 
+import tringesControlador.UnionBD;
+
 /**
  *
  * @author will
@@ -80,6 +82,9 @@ public class InterfazAvisoModificarTrineo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAceptarActionPerformed
+        UnionBD u = new UnionBD();
+        u.ejecutarSentenciaInsert("UPDATE trineos set fabricante="+InterfazModificarTrineo.jTextField1.getText()+" club="+InterfazModificarTrineo.jComboBox1.getItemAt(InterfazModificarTrineo.jComboBox1.getSelectedIndex())+" fecha="+InterfazModificarTrineo.jFormattedTextField1.getText()+";");
+        u.desconectar();
         new InterfazBannerModificarTrineo().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_bAceptarActionPerformed

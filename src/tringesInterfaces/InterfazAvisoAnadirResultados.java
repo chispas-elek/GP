@@ -4,6 +4,9 @@
  */
 package tringesInterfaces;
 
+import java.util.Calendar;
+import tringesControlador.UnionBD;
+
 /**
  *
  * @author Aaron
@@ -84,6 +87,11 @@ public class InterfazAvisoAnadirResultados extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        UnionBD u = new UnionBD();
+        Calendar cal = Calendar.getInstance();
+        //System.out.println("Los datos que me muestra son "+cal.get(Calendar.YEAR)+"-"+cal.get(Calendar.MONTH)+"-"+cal.get(Calendar.DATE));
+        u.ejecutarSentenciaInsert("INSERT INTO resultados(fecha,carrera,club,puntos) VALUES('"+cal.get(Calendar.YEAR)+"-"+cal.get(Calendar.MONTH)+"-"+cal.get(Calendar.DATE)+"','"+InterfazAnadirResultados.jComboBox1.getItemAt(InterfazAnadirResultados.jComboBox1.getSelectedIndex())+"','"+InterfazAnadirResultados.jComboBox2.getItemAt(InterfazAnadirResultados.jComboBox2.getSelectedIndex())+"',"+Integer.parseInt(InterfazAnadirResultados.jTextField1.getText())+");");
+        u.desconectar();
         InterfazAvisoAnadirResultados.this.setVisible(false);
         InterfazBannerPuntosCarreraOtorgadosClub ibpcoc = new InterfazBannerPuntosCarreraOtorgadosClub();
         ibpcoc.setVisible(true);

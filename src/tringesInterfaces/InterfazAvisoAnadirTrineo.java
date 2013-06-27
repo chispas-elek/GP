@@ -84,7 +84,7 @@ public class InterfazAvisoAnadirTrineo extends javax.swing.JFrame {
     private void bAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAceptarActionPerformed
         // TODO add your handling code here:
         UnionBD u = new UnionBD();
-        u.ejecutarSentenciaInsert("INSERT INTO trineos(fabricante,club,fecha) VALUES ('"+InterfazAnadirTrineo.jTextField1.getText()+"','"+InterfazAnadirTrineo.jTextField2.getText()+"','"+InterfazAnadirTrineo.jTextField3.getText()+"');");
+        u.ejecutarSentenciaInsert("INSERT INTO trineos(fabricante,club,fecha) VALUES ('"+InterfazAnadirTrineo.jTextField1.getText()+"','"+InterfazAnadirTrineo.jComboBox1.getItemAt(InterfazAnadirTrineo.jComboBox1.getSelectedIndex())+"','"+InterfazAnadirTrineo.jTextField3.getText()+"');");
         u.desconectar();
         this.dispose();
         new InterfazBannerAnadirTrineo().setVisible(true);

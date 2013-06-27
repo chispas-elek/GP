@@ -17,7 +17,7 @@ public class InterfazGestionarPerros extends javax.swing.JFrame {
     public InterfazGestionarPerros() {
         initComponents();
         
-        lPerros.removeAll();
+        /*lPerros.removeAll();
         UnionBD u = new UnionBD();
         ResultSet rs = u.ejecutarSentencia("SELECT nombre from PERROS;");
         DefaultListModel lm = new DefaultListModel();
@@ -29,7 +29,7 @@ public class InterfazGestionarPerros extends javax.swing.JFrame {
             u.desconectar();
         }catch (SQLException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 
     /**
@@ -55,12 +55,6 @@ public class InterfazGestionarPerros extends javax.swing.JFrame {
         setTitle(bundle.getString("TRINGES -GESTIONAR PERROS-")); // NOI18N
 
         tBuscar.setText(bundle.getString("BUSCAR PERRO...")); // NOI18N
-
-        lPerros.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Lur" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
 
         org.jdesktop.beansbinding.ELProperty eLProperty = org.jdesktop.beansbinding.ELProperty.create("");
         org.jdesktop.swingbinding.JListBinding jListBinding = org.jdesktop.swingbinding.SwingBindings.createJListBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, eLProperty, lPerros, "");

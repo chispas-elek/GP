@@ -4,6 +4,11 @@
  */
 package tringesInterfaces;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import tringesControlador.UnionBD;
+import static tringesInterfaces.InterfazAnadirPerros.jComboBox1;
+
 /**
  *
  * @author Aaron
@@ -15,6 +20,28 @@ public class InterfazAnadirResultados extends javax.swing.JFrame {
      */
     public InterfazAnadirResultados() {
         initComponents();
+        UnionBD u = new UnionBD();
+        jComboBox1.removeAllItems();
+         ResultSet rs = u.ejecutarSentencia("SELECT lugar from carreras;");
+        try {
+            while(rs.next()){
+                jComboBox1.addItem(rs.getObject(1));
+            }
+            u.desconectar();
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+        jComboBox2.removeAllItems();
+        rs = u.ejecutarSentencia("SELECT nombre from clubs");
+        try {
+            while(rs.next()) {
+                jComboBox2.addItem(rs.getObject(1));
+            }
+            u.desconectar();
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -159,11 +186,11 @@ public class InterfazAnadirResultados extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JComboBox jComboBox2;
+    public static javax.swing.JComboBox jComboBox1;
+    public static javax.swing.JComboBox jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
+    public static javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
