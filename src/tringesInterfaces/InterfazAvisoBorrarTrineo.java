@@ -86,7 +86,7 @@ public class InterfazAvisoBorrarTrineo extends javax.swing.JFrame {
         this.dispose();
         //Acceso DB
         UnionBD u = new UnionBD();
-        u.ejecutarSentenciaInsert("DELETE from trineos where fabricante="+InterfazGestionarTrineos.lTrineos.getSelectedValue()+";");
+        u.ejecutarSentenciaInsert("DELETE from trineos where fabricante='"+InterfazGestionarTrineos.lTrineos.getSelectedValue()+"';");
         u.desconectar();
         new InterfazBannerBorrarTrineo().setVisible(true);
     }//GEN-LAST:event_bAceptarActionPerformed

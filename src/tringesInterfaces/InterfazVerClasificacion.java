@@ -21,33 +21,35 @@ public class InterfazVerClasificacion extends javax.swing.JFrame {
     public InterfazVerClasificacion() {
         initComponents(); 
         
-         jList1.removeAll();
+        jList1.removeAll();
+        jList1.removeAll();
         UnionBD u = new UnionBD();
         ResultSet rs = u.ejecutarSentencia("SELECT nombre from CLUBS;");
         DefaultListModel lm = new DefaultListModel();
+        DefaultListModel lm2 = new DefaultListModel();
         try {
             while(rs.next()){
-               lm.addElement(rs.getObject(1));
+              int maxPuntos = 0;
+              lm.addElement(rs.getObject(1));
+              //Realizar nueva llamada
+              UnionBD u2 = new UnionBD();
+              ResultSet rs2 = u2.ejecutarSentencia("SELECT puntos from resultados where club='"+rs.getObject(1).toString()+"';");
+              if(rs2 != null) {
+                while(rs2.next()) {
+                      maxPuntos = maxPuntos + (int)rs2.getObject(1);
+                }
+              }else {
+                  maxPuntos = 0;
+              }
+              lm2.addElement(maxPuntos);
+              u2.desconectar();
             }
             jList1.setModel(lm);
+            jList2.setModel(lm2);
             u.desconectar();
         }catch (SQLException e) {
             e.printStackTrace();
         }
-        
-        jList2.removeAll();
-        rs = u.ejecutarSentencia("SELECT nombre from CARRERAS;");/*COUNT*/
-        lm = new DefaultListModel();
-        try {
-            while(rs.next()){
-               lm.addElement(rs.getObject(1));
-            }
-            jList2.setModel(lm);
-            u.desconectar();
-        }catch (SQLException e) {
-            e.printStackTrace();
-        }
-        
     }
 
     /**
@@ -180,8 +182,8 @@ public class InterfazVerClasificacion extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JList jList1;
-    private javax.swing.JList jList2;
+    public static javax.swing.JList jList1;
+    public static javax.swing.JList jList2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables

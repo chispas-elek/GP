@@ -83,7 +83,7 @@ public class InterfazAvisoModificarTrineo extends javax.swing.JFrame {
 
     private void bAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAceptarActionPerformed
         UnionBD u = new UnionBD();
-        u.ejecutarSentenciaInsert("UPDATE trineos set fabricante='"+InterfazModificarTrineo.jTextField1.getText()+"', club='"+InterfazModificarTrineo.jComboBox1.getItemAt(InterfazModificarTrineo.jComboBox1.getSelectedIndex())+"', fecha='"+InterfazModificarTrineo.jFormattedTextField1.getText()+"' where fabricante='"+InterfazModificarTrineo.jTextField1.getText()+"';");
+        u.ejecutarSentenciaInsert("UPDATE trineos set fabricante='"+InterfazModificarTrineo.jTextField1.getText()+"', club='"+InterfazModificarTrineo.jComboBox1.getItemAt(InterfazModificarTrineo.jComboBox1.getSelectedIndex())+"', fecha='"+InterfazModificarTrineo.jFormattedTextField1.getText()+"' where fabricante='"+InterfazGestionarTrineos.lTrineos.getSelectedValue().toString()+"';");
         u.desconectar();
         new InterfazBannerModificarTrineo().setVisible(true);
         this.dispose();

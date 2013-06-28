@@ -19,6 +19,7 @@ public class InterfazModificarTrineo extends javax.swing.JFrame {
      */
     public InterfazModificarTrineo() {
         initComponents();
+        jTextField1.setText(InterfazGestionarTrineos.lTrineos.getSelectedValue().toString());
         
         jComboBox1.removeAllItems();
         UnionBD u = new UnionBD();

@@ -223,7 +223,7 @@ public class InterfazGestionarClub extends javax.swing.JFrame {
     private javax.swing.JButton bBuscar;
     private javax.swing.JButton bModificar;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JList lClubs;
+    public static javax.swing.JList lClubs;
     private javax.swing.JTextField tBuscar;
     // End of variables declaration//GEN-END:variables
 }

@@ -21,17 +21,31 @@ public class InterfazModificarPerro extends javax.swing.JFrame {
      */
     public InterfazModificarPerro() {
         initComponents();
-        
-        lCachorros.removeAll();
+        String perroSeleccionado = InterfazGestionarPerros.jList1.getSelectedValue().toString();
         UnionBD u = new UnionBD();
-        ResultSet rs = u.ejecutarSentencia("SELECT nombre from CACHORROS where padre=" + jTextField1.getText() + " or madre=" + jTextField1.getText() + ";");
-        DefaultListModel lm = new DefaultListModel();
+        ResultSet rs = u.ejecutarSentencia("SELECT nombre,raza,sexo,carrera from PERROS where nombre='"+perroSeleccionado+"';");
         try {
             while(rs.next()){
-               lm.addElement(rs.getObject(1));
+                jTextField1.setText(rs.getObject(1).toString());
+                jTextField2.setText(rs.getObject(2).toString());
+                jTextField3.setText(rs.getObject(3).toString());
+                jTextField4.setText(rs.getObject(4).toString());
+            }
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        lCachorros.removeAll();
+        rs = u.ejecutarSentencia("SELECT cuantos,fecha from CACHORROS where padre='" + jTextField1.getText() + "' or madre='" + jTextField1.getText() + "';");
+        DefaultListModel lm = new DefaultListModel();
+        try {
+            if(rs != null) {
+                while(rs.next()){
+                lm.addElement(rs.getObject(1)+" cachorros el "+rs.getObject(2));
+                }
+            }else {
+                lm.addElement("Éste perro, no tiene cachorros");
             }
             lCachorros.setModel(lm);
-            u.desconectar();
         }catch (SQLException e) {
             e.printStackTrace();
         }
@@ -42,7 +56,6 @@ public class InterfazModificarPerro extends javax.swing.JFrame {
             while(rs.next()){
                 jComboBox2.addItem(rs.getObject(1));
             }
-            u.desconectar();
         }catch (SQLException e) {
             e.printStackTrace();
         }
@@ -53,10 +66,10 @@ public class InterfazModificarPerro extends javax.swing.JFrame {
             while(rs.next()){
                 jComboBox1.addItem(rs.getObject(1));
             }
-            u.desconectar();
         }catch (SQLException e) {
             e.printStackTrace();
         }
+        u.desconectar();
     }
 
     /**

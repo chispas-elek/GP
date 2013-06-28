@@ -23,7 +23,7 @@ public class InterfazGestionarCarreras extends javax.swing.JFrame {
         
         lCarreras.removeAll();
         UnionBD u = new UnionBD();
-        ResultSet rs = u.ejecutarSentencia("SELECT nombre from CARRERAS;");
+        ResultSet rs = u.ejecutarSentencia("SELECT lugar from CARRERAS;");
         DefaultListModel lm = new DefaultListModel();
         try {
             while(rs.next()){

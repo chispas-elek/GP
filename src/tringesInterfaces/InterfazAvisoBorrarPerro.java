@@ -79,10 +79,10 @@ public class InterfazAvisoBorrarPerro extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         UnionBD u = new UnionBD();
-        u.ejecutarSentenciaInsert("DELETE from perros where nombre="+InterfazGestionarPerros.lPerros.getSelectedValue()+";");
+        u.ejecutarSentenciaInsert("DELETE from perros where nombre='"+InterfazGestionarPerros.jList1.getSelectedValue()+"';");
         u.desconectar();
         new InterfazBannerBorrarPerro().setVisible(true);
-        dispose();
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

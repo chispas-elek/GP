@@ -83,7 +83,7 @@ public class InterfazAvisoModificarDatosClub extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         UnionBD u = new UnionBD();
-        u.ejecutarSentenciaInsert("UPDATE clubs set nombre='"+InterfazModificarClub.jTextField1.getText()+"', usuario='"+InterfazModificarClub.jTextField2.getText()+"', patrocinador='"+InterfazModificarClub.jTextField3.getText()+"', numperros="+InterfazModificarClub.jTextField4.getText()+" where usuario="+InterfazModificarClub.jTextField2.getText()+";");
+        u.ejecutarSentenciaInsert("UPDATE clubs set nombre='"+InterfazModificarClub.jTextField1.getText()+"', usuario='"+InterfazModificarClub.jTextField2.getText()+"',contraseña='"+InterfazModificarClub.jTextField4.getText()+  "', patrocinador='"+InterfazModificarClub.jTextField3.getText()+"', numperros="+InterfazModificarClub.jTextField5.getText()+" where nombre='"+InterfazGestionarClub.lClubs.getSelectedValue()+"';");
         u.desconectar();
         new InterfazBannerDatosModificadosClub().setVisible(true);
         this.dispose();
