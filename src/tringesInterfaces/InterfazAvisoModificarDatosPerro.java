@@ -4,6 +4,8 @@
  */
 package tringesInterfaces;
 
+import tringesControlador.UnionBD;
+
 /**
  *
  * @author administrador
@@ -80,6 +82,9 @@ public class InterfazAvisoModificarDatosPerro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        UnionBD u = new UnionBD();
+        u.ejecutarSentenciaInsert("UPDATE perros set nombre='"+InterfazModificarPerro.jTextField1.getText()+"', raza='"+InterfazModificarPerro.jTextField2.getText()+"', sexo ='"+InterfazModificarPerro.jTextField3.getText()+"', dueno='"+InterfazModificarPerro.jComboBox2.getItemAt(InterfazModificarPerro.jComboBox2.getSelectedIndex())+"',  club='"+InterfazModificarPerro.jComboBox1.getItemAt(InterfazModificarPerro.jComboBox1.getSelectedIndex())+"', carrera='"+InterfazModificarPerro.jTextField4.getText()+"' where nombre='"+InterfazModificarPerro.jTextField1.getText()+"';");
+        u.desconectar();
         new InterfazBannerModificarPerro().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed

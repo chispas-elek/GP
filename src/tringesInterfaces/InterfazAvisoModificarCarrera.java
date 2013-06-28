@@ -4,6 +4,8 @@
  */
 package tringesInterfaces;
 
+import tringesControlador.UnionBD;
+
 /**
  *
  * @author will
@@ -80,6 +82,9 @@ public class InterfazAvisoModificarCarrera extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAceptarActionPerformed
+        UnionBD u = new UnionBD();
+        u.ejecutarSentenciaInsert("UPDATE carreras set lugar="+InterfazModificarCarreras.jTextField1.getText()+", recorrido="+InterfazModificarCarreras.jTextField2.getText()+", maxperros="+InterfazModificarCarreras.jTextField3.getText()+" where lugar="+InterfazModificarCarreras.jTextField1.getText()+";");
+        u.desconectar();
         new InterfazBannerModificarCarrera().setVisible(true);
         this.dispose();
         //Acceso a db para modificar

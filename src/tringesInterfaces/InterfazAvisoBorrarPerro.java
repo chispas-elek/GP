@@ -4,6 +4,8 @@
  */
 package tringesInterfaces;
 
+import tringesControlador.UnionBD;
+
 /**
  *
  * @author administrador
@@ -36,6 +38,11 @@ public class InterfazAvisoBorrarPerro extends javax.swing.JFrame {
         jLabel1.setText(bundle.getString("¿QUIERE BORRAR EL PERRO?")); // NOI18N
 
         jButton1.setText(bundle.getString("SI")); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText(bundle.getString("NO")); // NOI18N
 
@@ -68,6 +75,15 @@ public class InterfazAvisoBorrarPerro extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        UnionBD u = new UnionBD();
+        u.ejecutarSentenciaInsert("DELETE from perros where nombre="+InterfazGestionarPerros.lPerros.getSelectedValue()+";");
+        u.desconectar();
+        new InterfazBannerBorrarPerro().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

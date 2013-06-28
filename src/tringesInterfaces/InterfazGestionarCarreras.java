@@ -211,7 +211,7 @@ public class InterfazGestionarCarreras extends javax.swing.JFrame {
     private javax.swing.JButton bBuscar;
     private javax.swing.JButton bModificar;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JList lCarreras;
+    public static javax.swing.JList lCarreras;
     private javax.swing.JTextField tBuscar;
     // End of variables declaration//GEN-END:variables
 }

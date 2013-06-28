@@ -168,7 +168,7 @@ public class InterfazGestionarCampeonatos extends javax.swing.JFrame {
     private void bBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBorrarActionPerformed
         // TODO add your handling code here:
         this.dispose();
-        new InterfazAvisoBorrarCampeonato().setVisible(true);
+        new InterfazAvisoBorrarCampeonato2().setVisible(true);
     }//GEN-LAST:event_bBorrarActionPerformed
 
     private void bBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBuscarActionPerformed
@@ -226,7 +226,7 @@ public class InterfazGestionarCampeonatos extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JList lCampeonatos;
+    public static javax.swing.JList lCampeonatos;
     private javax.swing.JTextField tBuscar;
     // End of variables declaration//GEN-END:variables
 }

@@ -4,6 +4,8 @@
  */
 package tringesInterfaces;
 
+import tringesControlador.UnionBD;
+
 /**
  *
  * @author Aaron
@@ -80,6 +82,9 @@ public class InterfazAvisoModificarDatosClub extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        UnionBD u = new UnionBD();
+        u.ejecutarSentenciaInsert("UPDATE clubs set nombre='"+InterfazModificarClub.jTextField1.getText()+"', usuario='"+InterfazModificarClub.jTextField2.getText()+"', patrocinador='"+InterfazModificarClub.jTextField3.getText()+"', numperros="+InterfazModificarClub.jTextField4.getText()+" where usuario="+InterfazModificarClub.jTextField2.getText()+";");
+        u.desconectar();
         new InterfazBannerDatosModificadosClub().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed

@@ -222,7 +222,7 @@ public class InterfazGestionarPerros extends javax.swing.JFrame {
     private javax.swing.JButton bBuscar;
     private javax.swing.JButton bModificar;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JList lPerros;
+    public static javax.swing.JList lPerros;
     private javax.swing.JTextField tBuscar;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
