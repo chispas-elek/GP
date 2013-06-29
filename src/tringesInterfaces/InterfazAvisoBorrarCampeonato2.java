@@ -79,8 +79,9 @@ public class InterfazAvisoBorrarCampeonato2 extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         UnionBD u = new UnionBD();
-        u.ejecutarSentenciaInsert("DELETE from campeonatos where nombre="+InterfazGestionarCampeonatos.lCampeonatos.getSelectedValue()+";");
+        u.ejecutarSentenciaInsert("DELETE from campeonatos where nombre='"+InterfazGestionarCampeonatos.lCampeonatos.getSelectedValue().toString()+"';");
         u.desconectar();
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

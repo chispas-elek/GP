@@ -190,6 +190,6 @@ public class InterfazGestionarDuenos extends javax.swing.JFrame {
     private javax.swing.JButton bBorrar;
     private javax.swing.JButton bModificar;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JList lDuenos;
+    public static javax.swing.JList lDuenos;
     // End of variables declaration//GEN-END:variables
 }

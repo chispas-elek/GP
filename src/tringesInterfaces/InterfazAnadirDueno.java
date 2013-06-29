@@ -120,6 +120,7 @@ public class InterfazAnadirDueno extends javax.swing.JFrame {
         //InterfazAnadirDueno.this.setVisible(false);
         InterfazAvisoAnadirDueno iaad = new InterfazAvisoAnadirDueno();
         iaad.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

@@ -83,7 +83,7 @@ public class InterfazAvisoModificarDatosCampeonato extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         UnionBD u = new UnionBD();
-        u.ejecutarSentenciaInsert("UPDATE campeonatos SET nombre="+InterfazModificarCampeonato.jTextField1.getText()+", fecha="+InterfazModificarCampeonato.jTextField2.getText()+" where fecha="+InterfazModificarCampeonato.jTextField2.getText()+";");
+        u.ejecutarSentenciaInsert("UPDATE campeonatos SET nombre='"+InterfazModificarCampeonato.jTextField1.getText()+"', fecha='"+InterfazModificarCampeonato.jTextField2.getText()+"' where nombre='"+InterfazGestionarCampeonatos.lCampeonatos.getSelectedValue().toString()+"';");
         u.desconectar();
         new InterfazBannerDatosCampeonatoModificados().setVisible(true);
         this.dispose();

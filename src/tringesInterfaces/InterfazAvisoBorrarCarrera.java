@@ -84,7 +84,7 @@ public class InterfazAvisoBorrarCarrera extends javax.swing.JFrame {
     private void bAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAceptarActionPerformed
         // TODO add your handling code here:
         UnionBD u = new UnionBD();
-        u.ejecutarSentenciaInsert("DELETE from carreras where lugar="+InterfazGestionarCarreras.lCarreras.getSelectedValue()+";");
+        u.ejecutarSentenciaInsert("DELETE from carreras where lugar='"+InterfazGestionarCarreras.lCarreras.getSelectedValue().toString()+"';");
         u.desconectar();
         this.dispose();
         new InterfazBannerBorrarCarrera().setVisible(true);

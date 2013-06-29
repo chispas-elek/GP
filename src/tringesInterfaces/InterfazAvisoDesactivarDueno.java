@@ -4,6 +4,8 @@
  */
 package tringesInterfaces;
 
+import tringesControlador.UnionBD;
+
 /**
  *
  * @author Aaron
@@ -36,6 +38,11 @@ public class InterfazAvisoDesactivarDueno extends javax.swing.JFrame {
         jLabel1.setText(bundle.getString("¿QUIERE DESACTIVAR EL DUEÑO SELECCIONADO?")); // NOI18N
 
         jButton1.setText(bundle.getString("SI")); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText(bundle.getString("NO")); // NOI18N
 
@@ -68,6 +75,13 @@ public class InterfazAvisoDesactivarDueno extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        UnionBD u = new UnionBD();
+        u.ejecutarSentenciaInsert("DELETE from duenos where nombre='"+InterfazGestionarDuenos.lDuenos.getSelectedValue().toString()+"';");
+        u.desconectar();
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -2,7 +2,10 @@ package tringesInterfaces;
 
 import java.awt.Dimension;
 import java.awt.Point;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Locale;
+import tringesControlador.UnionBD;
 
 /**
  *
@@ -143,21 +146,37 @@ public class InterfazIdentificarse extends javax.swing.JFrame {
 
     private void bAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAceptarActionPerformed
         // TODO add your handling code here:
-       /* String user = this.tUsuario.getText();
-        boolean existe = false; //Comprueba que el usuario exista
-        if(!existe) {
+        
+        /*UnionBD u = new UnionBD();
+        ResultSet rs = u.ejecutarSentencia("Select * from duenos where usuario='"+this.tUsuario.getText()+"';");
+        if(rs!= null) {
+            try {
+                while(rs.next()) {
+                    if(this.tPassword.getText() == rs.getObject(4).toString()) {
+                        InterfazIdentificarse.this.setVisible(false);
+                        if(rs.getObject(5).toString()=="administrador") {
+                            new InterfazUsuarioAdministrador().setVisible(true);
+                        }else {
+                            new InterfazUsuarioClub().setVisible(true);
+                        }
+                    }else {
+                        this.dispose();
+                        new InterfazBannerErrorLogin("idioma").setVisible(true);
+                    }
+                }
+            }catch(SQLException e) {
+                e.printStackTrace();
+            }
+        }else {
             this.dispose();
-            new InterfazBannerErrorLogin().setVisible(true);
-        }
-        String pass = this.tPassword.getText();
-        String authen = null;//password del usuario user extraido de la base de datos
-        if(pass.equals(authen)) { //Falta la gestion con la base de datos
-            
-            this.dispose();
-    
-            new InterfazBannerErrorLogin().setVisible(true);
+            new InterfazBannerErrorAlta().setVisible(true);
         }*/
+        
+     
+
+        //En vez de destuir la interfaz y liberar memoria, vamos a dejarla en background para acceder a variables.
         this.dispose();
+        //InterfazIdentificarse.this.setVisible(false);
         new InterfazUsuarioAdministrador().setVisible(true);
     }//GEN-LAST:event_bAceptarActionPerformed
 

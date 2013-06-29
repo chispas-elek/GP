@@ -83,7 +83,7 @@ public class InterfazAvisoModificarCarrera extends javax.swing.JFrame {
 
     private void bAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAceptarActionPerformed
         UnionBD u = new UnionBD();
-        u.ejecutarSentenciaInsert("UPDATE carreras set lugar="+InterfazModificarCarreras.jTextField1.getText()+", recorrido="+InterfazModificarCarreras.jTextField2.getText()+", maxperros="+InterfazModificarCarreras.jTextField3.getText()+" where lugar="+InterfazModificarCarreras.jTextField1.getText()+";");
+        u.ejecutarSentenciaInsert("UPDATE carreras set lugar='"+InterfazModificarCarreras.jTextField1.getText()+"', recorrido="+InterfazModificarCarreras.jTextField2.getText()+", maxperros="+InterfazModificarCarreras.jTextField3.getText()+" where lugar='"+InterfazGestionarCarreras.lCarreras.getSelectedValue().toString()+"';");
         u.desconectar();
         new InterfazBannerModificarCarrera().setVisible(true);
         this.dispose();

@@ -4,6 +4,13 @@
  */
 package tringesInterfaces;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import tringesControlador.UnionBD;
+import static tringesInterfaces.InterfazModificarCarreras.jTextField1;
+import static tringesInterfaces.InterfazModificarCarreras.jTextField2;
+import static tringesInterfaces.InterfazModificarCarreras.jTextField3;
+
 /**
  *
  * @author Aaron
@@ -15,6 +22,16 @@ public class InterfazModificarCampeonato extends javax.swing.JFrame {
      */
     public InterfazModificarCampeonato() {
         initComponents();
+        UnionBD u = new UnionBD();
+        ResultSet rs = u.ejecutarSentencia("SELECT * from campeonatos WHERE nombre='"+InterfazGestionarCampeonatos.lCampeonatos.getSelectedValue().toString()+"';");
+        try {
+            while(rs.next()) {
+                jTextField1.setText(rs.getObject(1).toString());
+                jTextField2.setText(rs.getObject(2).toString());
+            }
+        }catch(SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     /**

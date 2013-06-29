@@ -83,9 +83,10 @@ public class InterfazAvisoModificarDatosDueno extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         UnionBD u = new UnionBD();
-        u.ejecutarSentenciaInsert("UPDATE duenos set nombre='"+InterfazModificarDueno.jTextField1.getText()+"', apellidos='"+InterfazModificarDueno.jTextField2.getText()+"', usuario='"+InterfazModificarDueno.jTextField3.getText()+"' where nombre='"+InterfazModificarDueno.jTextField1.getText()+"';");
+        u.ejecutarSentenciaInsert("UPDATE duenos set nombre='"+InterfazModificarDueno.jTextField1.getText()+"', usuario='"+InterfazModificarDueno.jTextField2.getText()+"', contrasena='"+InterfazModificarDueno.jTextField3.getText()+"' where nombre='"+InterfazGestionarDuenos.lDuenos.getSelectedValue().toString()+"';");
         u.desconectar();
         new InterfazBannerDatosDuenoModificados().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
