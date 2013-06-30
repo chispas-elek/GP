@@ -83,7 +83,7 @@ public class InterfazAvisoAnadirDueno extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         UnionBD u = new UnionBD();
-        u.ejecutarSentenciaInsert("INSERT INTO duenos(nombre,usuario,contrasena,tipo) VALUES('"+InterfazAnadirDueno.jTextField1.getText()+"','"+InterfazAnadirDueno.jTextField2.getText()+"','"+InterfazAnadirDueno.jTextField3.getText()+"','usuario');");
+        u.ejecutarSentenciaInsert("INSERT INTO duenos(apellidos,nombre,usuario,contrasena,tipo) VALUES('','"+InterfazAnadirDueno.jTextField1.getText()+"','"+InterfazAnadirDueno.jTextField2.getText()+"','"+InterfazAnadirDueno.jTextField3.getText()+"','usuario');");
         u.desconectar();
         InterfazAvisoAnadirDueno.this.setVisible(false);
         InterfazBannerDuenoRegistradoSistema ibdrs = new InterfazBannerDuenoRegistradoSistema();

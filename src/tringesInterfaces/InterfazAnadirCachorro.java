@@ -23,7 +23,7 @@ public class InterfazAnadirCachorro extends javax.swing.JFrame {
         jComboBox1.removeAllItems();
         UnionBD u = new UnionBD();
         String sexo = InterfazModificarPerro.jTextField3.getText();
-        if(sexo == "macho"){
+        if("macho".equals(sexo)){
             sexo = "hembra";
         }else {
             sexo = "macho";

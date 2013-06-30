@@ -156,9 +156,9 @@ public class InterfazIdentificarse extends javax.swing.JFrame {
             contar.next();
             if(contar.getInt(1) == 1) {
                     while(rs.next()) {
-                        if(this.tPassword.getText().equals(rs.getObject(4).toString())) {
+                        if(this.tPassword.getText().equals(rs.getObject(5).toString())) {
                             InterfazIdentificarse.this.setVisible(false);
-                            if("administrador".equals(rs.getObject(5).toString())) {
+                            if("administrador".equals(rs.getObject(6).toString())) {
                                 new InterfazUsuarioAdministrador().setVisible(true);
                             }else {
                                 new InterfazUsuarioClub().setVisible(true);

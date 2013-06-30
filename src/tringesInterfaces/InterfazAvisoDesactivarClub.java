@@ -87,7 +87,6 @@ public class InterfazAvisoDesactivarClub extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         UnionBD u = new UnionBD();
-        System.out.println("DELETE from clubs where nombre='"+InterfazGestionarClub.lClubs.getSelectedValue()+"';");
         u.ejecutarSentenciaInsert("DELETE from clubs where nombre='"+InterfazGestionarClub.lClubs.getSelectedValue()+"';");
         u.desconectar();
         new InterfazBannerDesactivarClub().setVisible(true);
