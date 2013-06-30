@@ -147,37 +147,43 @@ public class InterfazIdentificarse extends javax.swing.JFrame {
     private void bAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAceptarActionPerformed
         // TODO add your handling code here:
         
-        /*UnionBD u = new UnionBD();
+        UnionBD u = new UnionBD();
+        
+        ResultSet contar = u.ejecutarSentencia("Select count(*) from duenos where usuario='"+this.tUsuario.getText()+"';");
         ResultSet rs = u.ejecutarSentencia("Select * from duenos where usuario='"+this.tUsuario.getText()+"';");
-        if(rs!= null) {
-            try {
-                while(rs.next()) {
-                    if(this.tPassword.getText() == rs.getObject(4).toString()) {
-                        InterfazIdentificarse.this.setVisible(false);
-                        if(rs.getObject(5).toString()=="administrador") {
-                            new InterfazUsuarioAdministrador().setVisible(true);
+        
+        try {
+            contar.next();
+            if(contar.getInt(1) == 1) {
+                    while(rs.next()) {
+                        if(this.tPassword.getText().equals(rs.getObject(4).toString())) {
+                            InterfazIdentificarse.this.setVisible(false);
+                            if("administrador".equals(rs.getObject(5).toString())) {
+                                new InterfazUsuarioAdministrador().setVisible(true);
+                            }else {
+                                new InterfazUsuarioClub().setVisible(true);
+                            }
                         }else {
-                            new InterfazUsuarioClub().setVisible(true);
+                            this.dispose();
+                            new InterfazBannerErrorLogin("idioma").setVisible(true);
                         }
-                    }else {
-                        this.dispose();
-                        new InterfazBannerErrorLogin("idioma").setVisible(true);
                     }
-                }
-            }catch(SQLException e) {
-                e.printStackTrace();
+            }else {
+                this.dispose();
+                new InterfazBannerErrorAlta().setVisible(true);
             }
-        }else {
-            this.dispose();
-            new InterfazBannerErrorAlta().setVisible(true);
-        }*/
+        }catch(SQLException e) {
+                e.printStackTrace();
+        }finally {
+            u.desconectar();
+        }
         
      
 
         //En vez de destuir la interfaz y liberar memoria, vamos a dejarla en background para acceder a variables.
-        this.dispose();
+        //this.dispose();
         //InterfazIdentificarse.this.setVisible(false);
-        new InterfazUsuarioAdministrador().setVisible(true);
+       // new InterfazUsuarioAdministrador().setVisible(true);
     }//GEN-LAST:event_bAceptarActionPerformed
 
     private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed
